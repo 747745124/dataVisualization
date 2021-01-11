@@ -1,13 +1,21 @@
 import twint
+
 c = twint.Config()
-c.Geo = "40.75773,-73.9857,1km"
+
+c.Geo = "40.7580002,-73.985997,2.99km"
 # TimeSquare
-c.Since = "2020-12-27"
-c.Until = "2021-1-8"
+c.Since = "2020-12-23"
+c.Until = "2020-12-30"
 c.Store_csv = True
-c.Output = "NewYork.csv"
+c.Output = "TimeSquareWeek51.csv"
+c.Links = 'exclude'
+c.Verified = True
+# c.Search = 'virus'
+c.Lang = 'en'
 
 twint.run.Search(c)
+
+# testing
 # import twint
 
 # # Configure
