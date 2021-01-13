@@ -72,10 +72,6 @@ sad = []
 
 # test = preprocess("sadData.csv")
 # test.head()
-for i in range(47, 52):
-    print("Week", i)
-    path = "数据集/TimeSquareWeek"+str(i)+".csv"
-    sad.append(allInOne(path)[2])
-
+allInOne("数据集/TimeSquareWeek1.csv")
 # print(sad)
 # allInOne("test.csv")
