@@ -1,11 +1,3 @@
-# update
-
-## 可能需要引入Echarts
-
-``` 
-npm install echarts --save
-```
-
 # covid19_viz
 
 ## Project setup
