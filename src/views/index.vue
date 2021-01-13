@@ -4,30 +4,25 @@
       <dv-loading v-if="loading">Loading...</dv-loading>
       <div v-else class="host-body">
         <div class="d-flex jc-center">
-          <dv-decoration-10 style="width: 33.3%; height: 0.0625rem" />
+          <dv-decoration-10 style="width:33.3%;height:.0625rem;" />
           <div class="d-flex jc-center">
-            <dv-decoration-8
-              :color="['#568aea', '#000000']"
-              style="width: 2.5rem; height: 0.625rem"
-            />
+            <dv-decoration-8 :color="['#568aea', '#000000']" style="width:2.5rem;height:.625rem;" />
             <div class="title">
               <span class="title-text">大数据可视化平台</span>
               <dv-decoration-6
                 class="title-bototm"
                 :reverse="true"
                 :color="['#50e3c2', '#67a1e5']"
-                style="width: 3.125rem; height: 0.1rem"
+                style="width:3.125rem;height:.1rem;"
               />
             </div>
             <dv-decoration-8
               :reverse="true"
               :color="['#568aea', '#000000']"
-              style="width: 2.5rem; height: 0.625rem"
+              style="width:2.5rem;height:.625rem;"
             />
           </div>
-          <dv-decoration-10
-            style="width: 33.3%; height: 0.0625rem; transform: rotateY(180deg)"
-          />
+          <dv-decoration-10 style="width:33.3%;height:.0625rem; transform: rotateY(180deg);" />
         </div>
 
         <!-- 第二行 -->
@@ -35,16 +30,12 @@
           <div class="d-flex" style="width: 40%">
             <div
               class="react-right ml-4"
-              style="
-                width: 6.25rem;
-                text-align: left;
-                background-color: #0f1325;
-              "
+              style="width: 6.25rem; text-align: left;background-color: #0f1325;"
             >
               <span class="react-before"></span>
               <span class="text">数据分析1</span>
             </div>
-            <div class="react-right ml-3" style="background-color: #0f1325">
+            <div class="react-right ml-3" style="background-color: #0f1325;">
               <span class="text colorBlue">数据分析2</span>
             </div>
           </div>
@@ -54,16 +45,10 @@
             </div>
             <div
               class="react-left mr-4"
-              style="
-                width: 6.25rem;
-                background-color: #0f1325;
-                text-align: right;
-              "
+              style="width: 6.25rem; background-color: #0f1325; text-align: right;"
             >
               <span class="react-after"></span>
-              <span class="text"
-                >{{ dateYear }} {{ dateWeek }} {{ dateDay }}</span
-              >
+              <span class="text">{{dateYear}} {{dateWeek}} {{dateDay}}</span>
             </div>
           </div>
         </div>
@@ -112,16 +97,16 @@
 </template>
 
 <script>
-import { formatTime } from "../utils/index.js";
-// import centerLeft1 from "./centerLeft1";
-// import centerLeft2 from "./centerLeft2";
-// import centerRight1 from "./centerRight1";
-// import centerRight2 from "./centerRight2";
-// import center from "./center";
-// import bottomLeft from "./bottomLeft";
-// import bottomRight from "./bottomRight";
+import { formatTime } from '../utils/index.js'
+import centerLeft1 from "./centerLeft1";
+import centerLeft2 from "./centerLeft2";
+import centerRight1 from "./centerRight1";
+import centerRight2 from "./centerRight2";
+import center from "./center";
+import bottomLeft from "./bottomLeft";
+import bottomRight from "./bottomRight";
 export default {
-  data() {
+  data () {
     return {
       loading: true,
       dateDay: null,
@@ -137,29 +122,29 @@ export default {
     centerRight2,
     center,
     bottomLeft,
-    bottomRight,
+    bottomRight
   },
-  mounted() {
+  mounted () {
     this.timeFn();
     this.cancelLoading();
   },
   methods: {
-    timeFn() {
+    timeFn () {
       setInterval(() => {
-        this.dateDay = formatTime(new Date(), "HH: mm: ss");
-        this.dateYear = formatTime(new Date(), "yyyy-MM-dd");
+        this.dateDay = formatTime(new Date(), 'HH: mm: ss');
+        this.dateYear = formatTime(new Date(), 'yyyy-MM-dd');
         this.dateWeek = this.weekday[new Date().getDay()];
-      }, 1000);
+      }, 1000)
     },
-    cancelLoading() {
+    cancelLoading () {
       setTimeout(() => {
         this.loading = false;
       }, 500);
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss">
-@import "../assets/scss/index.scss";
+@import '../assets/scss/index.scss';
 </style>
