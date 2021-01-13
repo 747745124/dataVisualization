@@ -1,3 +1,4 @@
+<!-- 本文件不被引用 -->
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
