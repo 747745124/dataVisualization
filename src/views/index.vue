@@ -1,54 +1,32 @@
+<!-- {{dateYear}} {{dateWeek}} {{dateDay}} -->
 <template>
   <div id="index">
     <dv-full-screen-container class="bg">
       <dv-loading v-if="loading">Loading...</dv-loading>
       <div v-else class="host-body">
         <div class="d-flex jc-center">
-          <dv-decoration-10 style="width:33.3%;height:.0625rem;" />
           <div class="d-flex jc-center">
-            <dv-decoration-8 :color="['#568aea', '#000000']" style="width:2.5rem;height:.625rem;" />
-            <div class="title">
-              <span class="title-text">大数据可视化平台</span>
-              <dv-decoration-6
-                class="title-bototm"
-                :reverse="true"
-                :color="['#50e3c2', '#67a1e5']"
-                style="width:3.125rem;height:.1rem;"
-              />
-            </div>
-            <dv-decoration-8
-              :reverse="true"
-              :color="['#568aea', '#000000']"
-              style="width:2.5rem;height:.625rem;"
-            />
           </div>
-          <dv-decoration-10 style="width:33.3%;height:.0625rem; transform: rotateY(180deg);" />
         </div>
 
         <!-- 第二行 -->
         <div class="d-flex jc-between px-2">
-          <div class="d-flex" style="width: 40%">
+          <div class="d-flex" style="width: 45%">
             <div
-              class="react-right ml-4"
-              style="width: 6.25rem; text-align: left;background-color: #0f1325;"
+              class="react-right bg-color-blue ml-4"
+              style="width: 24rem; text-align: left;"
             >
-              <span class="react-before"></span>
-              <span class="text">数据分析1</span>
-            </div>
-            <div class="react-right ml-3" style="background-color: #0f1325;">
-              <span class="text colorBlue">数据分析2</span>
+              <span class="react-before bg-color-blue"></span>
+              <span class="text">当我们在做数据可视化的时候我们是在生产什么垃圾</span>
             </div>
           </div>
-          <div style="width: 40%" class="d-flex">
-            <div class="react-left bg-color-blue mr-3">
-              <span class="text fw-b">vue-big-screen</span>
-            </div>
+          <div class="d-flex" style="width: 45%">
             <div
               class="react-left mr-4"
-              style="width: 6.25rem; background-color: #0f1325; text-align: right;"
+              style="width: 16rem; background-color: #0f1325; text-align: right;"
             >
               <span class="react-after"></span>
-              <span class="text">{{dateYear}} {{dateWeek}} {{dateDay}}</span>
+              <span class="text">李绍康 朱晴川 席昊</span>
             </div>
           </div>
         </div>
