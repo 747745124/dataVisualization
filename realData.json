@@ -1,0 +1,157 @@
+{
+    "data": [
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                }
+            ],
+            "week": 1,
+            "twitter": {
+                "topTwitter": "Raise your hand if you BELIEVE that everyone should have the basic necessities like clean water, mental health services, health care, education, and shelter. Let's see how many hands go up ",
+                "total": 3581,
+                "moodIndex": 0.2696,
+                "topic": [
+                    "#GoldenGlobes",
+                    "#2020",
+                    "#Australia"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                }
+            ],
+            "week": 2,
+            "twitter": {
+                "topTwitter": "HALA MADRID #Campeones",
+                "total": 4308,
+                "moodIndex": 0.2905,
+                "topic": [
+                    "#Astros",
+                    "#AcademyAwards",
+                    "#MondayMorning"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                }
+            ],
+            "week": 3,
+            "twitter": {
+                "topTwitter": "My name is currently trending because of  the THPS series, not because of my mortality. I’m still alive and well, riding my skateboard and getting funny looks from TSA agents (as recently as yesterday).  Skate or die.",
+                "total": 4416,
+                "moodIndex": 0.2945,
+                "topic": [
+                    "#Trump",
+                    "#NHL",
+                    "#NewYorkWeekly"
+                ]
+            }
+        }
+    ]
+}
