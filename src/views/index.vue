@@ -45,12 +45,13 @@
           <div class="center-box ml-3">
             <div class="mb-2">
               <dv-border-box-7>
-                <bottomLeft />
+                <bottomLeft :week="curWeek"></bottomLeft>
               </dv-border-box-7>
             </div>
             <div>
               <dv-border-box-7>
-                <bottomRight />
+                <!-- 时间滚动条 -->
+                <slider-bar :min=1 :max=11 v-model = "startWeek" @onSlide="updateWeek"></slider-bar>
               </dv-border-box-7>
             </div>
           </div>
@@ -76,6 +77,7 @@
 </template>
 
 <script>
+import sliderBar from "./sliderBar";
 import { formatTime } from '../utils/index.js'
 import centerLeft1 from "./centerLeft1";
 import centerLeft2 from "./centerLeft2";
@@ -83,7 +85,7 @@ import centerRight1 from "./centerRight1";
 import centerRight2 from "./centerRight2";
 // import center from "./center";
 import bottomLeft from "./bottomLeft";
-import bottomRight from "./bottomRight";
+// import bottomRight from "./bottomRight";
 export default {
   data () {
     return {
@@ -94,17 +96,20 @@ export default {
       weekday: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
       //字符串
       title: "当我们在做数据可视化的时候我们是在生产什么垃圾",
-      groupMember: "李绍康 朱晴川 席昊"
+      groupMember: "李绍康 朱晴川 席昊",
+      startWeek: 1,
+      curWeek: 1, //当前周
     };
   },
   components: {
+    sliderBar,
     centerLeft1,
     centerLeft2,
     centerRight1,
     centerRight2,
     // center,
     bottomLeft,
-    bottomRight
+    // bottomRight
   },
   mounted () {
     this.timeFn();
@@ -122,6 +127,10 @@ export default {
       setTimeout(() => {
         this.loading = false;
       }, 500);
+    },
+    updateWeek(week) {
+      //滑块改变时间时调用
+      this.curWeek = week;
     }
   }
 };
