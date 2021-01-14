@@ -6,116 +6,34 @@
 
 <script>
 import Chart from './chart.vue'
+import FakeData from '@/static/fakeData.vue'
 export default {
   data () {
     return {
       cdata: {
-        category: [
-          "市区",
-          "万州",
-          "江北",
-          "南岸",
-          "北碚",
-          "綦南",
-          "长寿",
-          "永川",
-          "璧山",
-          "江津",
-          "城口",
-          "大足",
-          "垫江",
-          "丰都",
-          "奉节",
-          "合川",
-          "江津区",
-          "开州",
-          "南川",
-          "彭水",
-          "黔江",
-          "石柱",
-          "铜梁",
-          "潼南",
-          "巫山",
-          "巫溪",
-          "武隆",
-          "秀山",
-          "酉阳",
-          "云阳",
-          "忠县",
-          "川东",
-          "检修"
+        city: [],
+        infected: [],
+        virusData: 
+        [
+          {name:'Bronx',infected: 73371,death: 123,cured: 23313
+          },
+          {name:'Manhattan',infected: 24427,death: 109,cured: 12241
+          },
+          {name:'Queens',infected: 3512,death: 22,cured: 1234
+          },
+          {name:'Brooklyn',infected: 23441,death: 121,cured: 6632
+          },
+          {name:'Staten Island',infected: 11223,death: 231,cured: 5532
+          }
         ],
-        lineData: [
-          18092,
-          20728,
-          24045,
-          28348,
-          32808,
-          36097,
-          39867,
-          44715,
-          48444,
-          50415,
-          56061,
-          62677,
-          59521,
-          67560,
-          18092,
-          20728,
-          24045,
-          28348,
-          32808,
-          36097,
-          39867,
-          44715,
-          48444,
-          50415,
-          36097,
-          39867,
-          44715,
-          48444,
-          50415,
-          50061,
-          32677,
-          49521,
-          32808
-        ],
-        barData: [
-          4600,
-          5000,
-          5500,
-          6500,
-          7500,
-          8500,
-          9900,
-          12500,
-          14000,
-          21500,
-          23200,
-          24450,
-          25250,
-          33300,
-          4600,
-          5000,
-          5500,
-          6500,
-          7500,
-          8500,
-          9900,
-          22500,
-          14000,
-          21500,
-          8500,
-          9900,
-          12500,
-          14000,
-          21500,
-          23200,
-          24450,
-          25250,
-          7500
-        ],
-        rateData: []
+        week: 1,
+        twitter: 
+        {
+          topTwitter:'Make America Great Again!',
+          total: 3220,
+          moodIndex: 0.38,
+          topic: ['virus','election','lockdown']
+        }
       }
     };
   },
@@ -128,10 +46,13 @@ export default {
   methods: {
     // 根据自己的业务情况修改
     setData () {
-      for (let i = 0; i < this.cdata.barData.length -1; i++) {
-        let rate = this.cdata.barData[i] / this.cdata.lineData[i];
-        this.cdata.rateData.push(rate.toFixed(2));
+      console.log(FakeData[0]);
+      /*
+      for (let i = 0; i < FakeData.data[0].virusData.length; i++) {
+        this.cdata.city.push(FakeData.data[0].virusData[i].name);
+        this.cdata.infected.push(FakeData.data[0].virusData[i].infected);
       }
+      */
     },
   }
 };

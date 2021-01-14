@@ -107,7 +107,7 @@ export default {
                   color: "#F02FC2"
                 }
               },
-              data: newData.rateData
+              data: newData.infected
             },
             {
               name: "已贯通",
@@ -122,7 +122,7 @@ export default {
                   ])
                 }
               },
-              data: newData.barData
+              data: newData.infected
             },
             {
               name: "计划贯通",
@@ -140,7 +140,7 @@ export default {
                 }
               },
               z: -12,
-              data: newData.lineData
+              data: newData.infected
             }
           ]
         }
