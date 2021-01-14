@@ -4,8 +4,8 @@
       id="centreLeft2Chart"
       ref="centreLeft2ChartRef"
       :options="options"
-      height="4.5rem"
-      width="4.125rem"
+      height="100%"
+      width="100%"
     ></Echart>
   </div>
 </template>

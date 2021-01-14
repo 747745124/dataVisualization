@@ -3,7 +3,7 @@
     <Echart
       :options="options"
       id="centreRight2Chart1"
-      height="2.60rem"
+      height="10%"
       width="100%"
     ></Echart>
   </div>

@@ -27,9 +27,9 @@
         </div>
 
         <div class="body-box">
-          <!-- 第二行数据 -->
-          <div class="content-box">
-            <div>
+          <!-- 左侧 -->
+          <div class="left-box">
+            <div class="mb-2">
               <dv-border-box-7>
                 <centerLeft1 />
               </dv-border-box-7>
@@ -39,12 +39,25 @@
                 <centerLeft2 />
               </dv-border-box-7>
             </div>
-            <!-- 中间 -->
-            <div>
-              <center />
+          </div>
+
+          <!-- 中间 -->
+          <div class="center-box ml-3">
+            <div class="mb-2">
+              <dv-border-box-7>
+                <bottomLeft />
+              </dv-border-box-7>
             </div>
-            <!-- 中间 -->
             <div>
+              <dv-border-box-7>
+                <bottomRight />
+              </dv-border-box-7>
+            </div>
+          </div>
+
+          <!-- 右侧 -->
+          <div class="right-box ml-3">
+            <div class="mb-2">
               <dv-border-box-7>
                 <centerRight2 />
               </dv-border-box-7>
@@ -56,15 +69,6 @@
             </div>
           </div>
 
-          <!-- 第三行数据 -->
-          <div class="bototm-box">
-            <dv-border-box-7>
-              <bottomLeft />
-            </dv-border-box-7>
-            <dv-border-box-7>
-              <bottomRight />
-            </dv-border-box-7>
-          </div>
         </div>
       </div>
     </dv-full-screen-container>
@@ -77,7 +81,7 @@ import centerLeft1 from "./centerLeft1";
 import centerLeft2 from "./centerLeft2";
 import centerRight1 from "./centerRight1";
 import centerRight2 from "./centerRight2";
-import center from "./center";
+// import center from "./center";
 import bottomLeft from "./bottomLeft";
 import bottomRight from "./bottomRight";
 export default {
@@ -98,7 +102,7 @@ export default {
     centerLeft2,
     centerRight1,
     centerRight2,
-    center,
+    // center,
     bottomLeft,
     bottomRight
   },
