@@ -1,17 +1,15 @@
 <template>
   <div id="bottomLeft">
-    <div class="bg-color-black">
-      <div class="d-flex pt-2 pl-2">
-        <span style="color:#5cd9e8">
-          <icon name="chart-bar"></icon>
-        </span>
-        <div class="d-flex">
-          <span class="fs-xl text mx-2">数据统计图</span>
-        </div>
-      </div>
-      <div>
-        <BottomLeftChart />
-      </div>
+    <div class="d-flex pt-2 pl-2">
+      <!-- <span style="color:#5cd9e8">
+        <icon name="chart-bar"></icon>
+      </span> -->
+      <!-- <div class="d-flex">
+        <span class="fs-xl text mx-2">数据统计图</span>
+      </div> -->
+    </div>
+    <div>
+      <BottomLeftChart />
     </div>
   </div>
 </template>

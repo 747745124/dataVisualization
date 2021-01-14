@@ -5,7 +5,7 @@
     height: 100%;
     .bg {
         padding: 0.2rem 0.2rem 0 0.2rem;
-        background-image: url("../assets/pageBg.png");
+        /* background-image: url("../assets/pageBg.png"); */
         background-size: cover;
         background-position: center center;
     }
@@ -32,7 +32,6 @@
         }
         // 平行四边形
         .react-left {
-            cursor: pointer;
             font-size: 0.225rem;
             width: 3.75rem;
             height: 0.625rem;
@@ -55,7 +54,6 @@
             }
         }
         .react-right {
-            cursor: pointer;
             font-size: 0.225rem;
             width: 3.75rem;
             height: 0.625rem;

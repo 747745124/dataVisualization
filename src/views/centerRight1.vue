@@ -1,17 +1,15 @@
 <template>
   <div id="centreRight1">
-    <div class="bg-color-black">
-      <div class="d-flex pt-2 pl-2">
-        <span style="color:#5cd9e8">
-          <icon name="chart-line"></icon>
-        </span>
-        <div class="d-flex">
-          <span class="fs-xl text mx-2">任务完成排行榜</span>
-        </div>
-      </div>
-      <div class="d-flex jc-center body-box">
-        <dv-scroll-board :config="config" style="width:3.375rem;height:4.28rem" />
-      </div>
+    <div class="d-flex pt-2 pl-2">
+      <!-- <span style="color:#5cd9e8">
+        <icon name="chart-line"></icon>
+      </span> -->
+      <!-- <div class="d-flex">
+        <span class="fs-xl text mx-2">任务完成排行榜</span>
+      </div> -->
+    </div>
+    <div class="d-flex jc-center body-box">
+      <dv-scroll-board :config="config" style="width:3.375rem;height:4.28rem" />
     </div>
   </div>
 </template>

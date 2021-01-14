@@ -1,30 +1,24 @@
 <template>
   <div id="centreLeft1">
-    <div class="bg-color-black">
-      <div class="d-flex pt-2 pl-2">
-        <span style="color:#5cd9e8">
-          <icon name="chart-bar"></icon>
-        </span>
+    <div class="d-flex pt-2 pl-2">
+      <!-- <span style="color:#5cd9e8">
+        <icon name="chart-bar"></icon>
+      </span> -->
+    </div>
+    <div class="d-flex jc-center">
+      <CentreLeft1Chart />
+    </div>
+    <!-- 4个主要的数据 -->
+    <div class="bottom-data">
+      <div class="item-box" v-for="(item,index) in numberData" :key="index">
         <div class="d-flex">
-          <span class="fs-xl text mx-2">任务通过率</span>
-          <dv-decoration-3 style="width:1.25rem;height:.25rem; position:relative;top:-.0375rem;" />
+          <span class="coin">￥</span>
+          <dv-digital-flop :config="item.number" style="width:2.5rem;height:.625rem;" />
         </div>
-      </div>
-      <div class="d-flex jc-center">
-        <CentreLeft1Chart />
-      </div>
-      <!-- 4个主要的数据 -->
-      <div class="bottom-data">
-        <div class="item-box" v-for="(item,index) in numberData" :key="index">
-          <div class="d-flex">
-            <span class="coin">￥</span>
-            <dv-digital-flop :config="item.number" style="width:2.5rem;height:.625rem;" />
-          </div>
-          <p class="text" style="text-align: center;">
-            {{item.text}}
-            <span class="colorYellow">(件)</span>
-          </p>
-        </div>
+        <p class="text" style="text-align: center;">
+          {{item.text}}
+          <span class="colorYellow">(件)</span>
+        </p>
       </div>
     </div>
   </div>

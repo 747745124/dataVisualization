@@ -1,18 +1,15 @@
 <template>
   <div id="centreLeft1">
-    <div class="bg-color-black">
-      <div class="d-flex pt-2 pl-2">
-        <span style="color:#5cd9e8">
-          <icon name="chart-pie"></icon>
-        </span>
-        <div class="d-flex">
-          <span class="fs-xl text mx-2">地图数据</span>
-          <dv-decoration-1 style="width:1.25rem;height:.25rem; position:relative;top:-.0375rem;" />
-        </div>
-      </div>
-      <div class="d-flex jc-center">
-        <CentreLeft2Chart />
-      </div>
+    <div class="d-flex pt-2 pl-2">
+      <!-- <span style="color:#5cd9e8">
+        <icon name="chart-pie"></icon>
+      </span> -->
+      <!-- <div class="d-flex">
+        <span class="fs-xl text mx-2">地图数据</span>
+      </div> -->
+    </div>
+    <div class="d-flex jc-center">
+      <CentreLeft2Chart />
     </div>
   </div>
 </template>
