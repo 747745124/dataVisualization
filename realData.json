@@ -152,6 +152,414 @@
                     "#NewYorkWeekly"
                 ]
             }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                }
+            ],
+            "week": 4,
+            "twitter": {
+                "topTwitter": "Imagine having your musical guest previously come out and share their social anxiety with crowds, but then invite a crowd of people onstage with him. I'm glad the fans were calm and knew not to rush or make chaos. Respect to #Stay",
+                "total": 4129,
+                "moodIndex": 0.2924,
+                "topic": [
+                    "#Grammys",
+                    "#KobeBryant",
+                    "#ThankYouKobe"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                }
+            ],
+            "week": 5,
+            "twitter": {
+                "topTwitter": "And if a president does something, which he believes will help him get elected in the public interest, that cannot be the kind of quid pro quo that results in impeachment.sThe president is the executive branch. He is irreplaceable,  —@AlanDersh  And ya’ll ok with this?",
+                "total": 4214,
+                "moodIndex": 0.2825,
+                "topic": [
+                    "#SuperBowl",
+                    "#Senate",
+                    "#Impeachment"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                }
+            ],
+            "week": 6,
+            "twitter": {
+                "topTwitter": "There are 1,681 caucus sites in Iowa. Three college kids with a rudimentary excel spreadsheet could tabulate the vote while eating a pizza. The fact that the Democrats can’t pull this off with the eyes of the nation watching reeks of corrruption. #BernieIsGettingScrewed (again)",
+                "total": 4067,
+                "moodIndex": 0.2708,
+                "topic": [
+                    "#Bernie",
+                    "#Oscars",
+                    "#MissAmericana"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                }
+            ],
+            "week": 7,
+            "twitter": {
+                "topTwitter": "You probably don’t know this but I’ve been a smoker for 13 years. Quitting has been immensely difficult for me, and I really need to stop because I sing for a living. I’ve quit and taken it up and quit again a dozen times. Today, the pack is gone and I’m going for a run. Fuck it.",
+                "total": 3526,
+                "moodIndex": 0.2897,
+                "topic": [
+                    "#LivePD",
+                    "#LiveRescues",
+                    "#China"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                }
+            ],
+            "week": 8,
+            "twitter": {
+                "topTwitter": "Whatever is bothering you right now, take a breathe, be grateful for what is going well and realize what you can and can’t control, if you can’t control it, let it go and focus on what you can control, which at least is your “gratitude scale” ❤️♥️💛",
+                "total": 3645,
+                "moodIndex": 0.2882,
+                "topic": [
+                    "#Warren2020",
+                    "#TheBachelor",
+                    "#DemocraticDebate"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 1,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 3,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 3,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 1,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 0,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 8,
+                    "death": 0,
+                    "cured": 0
+                }
+            ],
+            "week": 9,
+            "twitter": {
+                "topTwitter": "I’m dying to know what the Biden campaign promised @PeteButtigieg to have him drop out of the primaries a mere 36 hours before #SuperTuesday... these politicians are pathetic. They will do anything to try and take it from Bernie...",
+                "total": 4144,
+                "moodIndex": 0.2996,
+                "topic": [
+                    "#Coronavirus",
+                    "#Virus",
+                    "#WarrenForPresident"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 37,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 123,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Queens",
+                    "infected": 87,
+                    "death": 1,
+                    "cured": 0
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 70,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 11,
+                    "death": 0,
+                    "cured": 0
+                },
+                {
+                    "name": "Total",
+                    "infected": 327,
+                    "death": 1,
+                    "cured": 0
+                }
+            ],
+            "week": 10,
+            "twitter": {
+                "topTwitter": "If you ever went to the bathroom at CBGB’s you’re immune to the Coronavirus",
+                "total": 4483,
+                "moodIndex": 0.3193,
+                "topic": [
+                    "#Coronavirus",
+                    "#LivePD",
+                    "#Trump"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 1479,
+                    "death": 6,
+                    "cured": 374
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 2386,
+                    "death": 6,
+                    "cured": 336
+                },
+                {
+                    "name": "Queens",
+                    "infected": 2770,
+                    "death": 19,
+                    "cured": 640
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 3417,
+                    "death": 12,
+                    "cured": 500
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 469,
+                    "death": 0,
+                    "cured": 94
+                },
+                {
+                    "name": "Total",
+                    "infected": 10522,
+                    "death": 43,
+                    "cured": 1944
+                }
+            ],
+            "week": 11,
+            "twitter": {
+                "topTwitter": "With 99% reporting in Michigan, @realDonaldTrump has 637,000+ votes, absolutely crushing previous Republican and Democrat  incumbents... By comparison Obama had 174k votes in 2012.",
+                "total": 4669,
+                "moodIndex": 0.331,
+                "topic": [
+                    "#Coronavirus",
+                    "#SocialDistancing",
+                    "#COVID"
+                ]
+            }
         }
     ]
 }
