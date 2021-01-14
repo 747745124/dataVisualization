@@ -46,7 +46,7 @@ export default {
             }
           },
           legend: {
-            data: ["已贯通", "计划贯通", "贯通率"],
+            data: ["感染数", "死亡数", "治愈数"],
             textStyle: {
               color: "#B4B4B4"
             },
@@ -58,7 +58,7 @@ export default {
             y: "4%"
           },
           xAxis: {
-            data: newData.category,
+            data: newData.city,
             axisLine: {
               lineStyle: {
                 color: "#B4B4B4"
@@ -95,7 +95,7 @@ export default {
           ],
           series: [
             {
-              name: "贯通率",
+              name: "感染数",
               type: "line",
               smooth: true,
               showAllSymbol: true,
@@ -110,7 +110,7 @@ export default {
               data: newData.infected
             },
             {
-              name: "已贯通",
+              name: "死亡数",
               type: "bar",
               barWidth: 10,
               itemStyle: {
@@ -122,10 +122,10 @@ export default {
                   ])
                 }
               },
-              data: newData.infected
+              data: newData.death
             },
             {
-              name: "计划贯通",
+              name: "治愈数",
               type: "bar",
               barGap: "-100%",
               barWidth: 10,
@@ -140,7 +140,7 @@ export default {
                 }
               },
               z: -12,
-              data: newData.infected
+              data: newData.cured
             }
           ]
         }
