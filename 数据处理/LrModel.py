@@ -68,10 +68,8 @@ def allInOne(fileName):
     return result
 
 
-sad = []
-
 # test = preprocess("sadData.csv")
 # test.head()
-allInOne("数据集/TimeSquareWeek11.csv")
+allInOne("数据集/TimeSquareWeek21.csv")
 # print(sad)
 # allInOne("test.csv")
