@@ -86,7 +86,7 @@ import centerRight2 from "./centerRight2";
 // import center from "./center";
 // import bottomLeft from "./bottomLeft";
 // import bottomRight from "./bottomRight";
-import centerUp from "./centerUp";
+import centerUp from "@/components/centerUp";
 export default {
   data () {
     return {
