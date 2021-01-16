@@ -23,7 +23,7 @@ import '@/common/flexible.js';
 import './assets/scss/style.scss';
 
 
-//引入echart
+// 引入echart
 import echarts from 'echarts'
 Vue.prototype.$echarts = echarts
 
