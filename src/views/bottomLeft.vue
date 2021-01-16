@@ -1,3 +1,4 @@
+<!-- 保留 -->
 <template>
   <div id="bottomLeft">
     <div class="d-flex pt-2 pl-2">
@@ -9,7 +10,7 @@
       </div> -->
     </div>
     <div>
-      <BottomLeftChart />
+      <BottomLeftChart :week="week"></BottomLeftChart>
     </div>
   </div>
 </template>
@@ -22,6 +23,9 @@ export default {
   },
   components: {
     BottomLeftChart
+  },
+  props: {
+    week: Number,
   },
   mounted() {},
   methods: {}

@@ -6,7 +6,7 @@
 
 <script>
 import Chart from './chart.vue'
-import FakeData from '@/static/data.json'
+import Data from '@/static/data.json'
 export default {
   data () {
     return {
@@ -21,18 +21,38 @@ export default {
   components: {
     Chart,
   },
+  props: {
+    week: Number,
+  },
+  watch: {
+    week: {
+      handler(newWeek) {
+        // 当周数发生变动时，重设数据
+        this.setData(newWeek);
+      }
+    }
+  },
   mounted () {
-    this.setData();
+    this.setData(1);
   },
   methods: {
-    // 根据自己的业务情况修改
-    setData () {     
-      for (let i = 0; i < FakeData.data[0].virusData.length; i++) {
-        this.cdata.city.push(FakeData.data[0].virusData[i].name);
-        this.cdata.infected.push(FakeData.data[0].virusData[i].infected);
-        this.cdata.death.push(FakeData.data[0].virusData[i].death);
-        this.cdata.cured.push(FakeData.data[0].virusData[i].cured);
+    // 显示当周数据
+    setData (week) {     
+      let newData = {
+        city: [],
+        infected: [],
+        death: [],
+        cured: []
+      };
+      let weekNum = week - 1;
+      let weekData = Data.data[weekNum].virusdata;
+      for (let i = 0; i < weekData.length; i++) {
+        newData.city.push(weekData[i].name);
+        newData.infected.push(weekData[i].infected);
+        newData.death.push(weekData[i].death);
+        newData.cured.push(weekData[i].cured);
       }
+      this.cdata = newData;
     },
   }
 };
