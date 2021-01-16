@@ -36,7 +36,7 @@
             </div>
             <div>
               <dv-border-box-7>
-                <centerLeft2 />
+                <leftDown :week="curWeek"></leftDown>
               </dv-border-box-7>
             </div>
           </div>
@@ -45,7 +45,7 @@
           <div class="center-box ml-3">
             <div class="mb-2">
               <dv-border-box-7>
-                <centerUp :week="curWeek"></centerUp>
+                <mapChart></mapChart>
               </dv-border-box-7>
             </div>
             <div>
@@ -80,13 +80,13 @@
 import sliderBar from "./sliderBar";
 import { formatTime } from '../utils/index.js'
 import centerLeft1 from "./centerLeft1";
-import centerLeft2 from "./centerLeft2";
 import centerRight1 from "./centerRight1";
 import centerRight2 from "./centerRight2";
 // import center from "./center";
 // import bottomLeft from "./bottomLeft";
 // import bottomRight from "./bottomRight";
-import centerUp from "@/components/centerUp";
+import leftDown from "@/components/leftDown";
+import mapChart from "@/components/mapChart"
 export default {
   data () {
     return {
@@ -105,13 +105,13 @@ export default {
   components: {
     sliderBar,
     centerLeft1,
-    centerLeft2,
     centerRight1,
     centerRight2,
     // center,
     // bottomLeft,
     // bottomRight
-    centerUp,
+    leftDown,
+    mapChart,
   },
   mounted () {
     this.timeFn();

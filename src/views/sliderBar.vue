@@ -44,10 +44,10 @@ export default {
         _this.cur = Math.round((_this.max - _this.min) * scale + _this.min);
         _this.cur = Math.max(_this.cur, _this.min);
         _this.cur = Math.min(_this.cur, _this.max);
+        _this.$emit("onSlide", _this.curVal);
       };
       document.onmouseup = function () {
         document.onmousemove = document.onmouseup = null;
-        _this.$emit('onSlide', _this.curVal);
       };
       return false;
     };
@@ -57,7 +57,7 @@ export default {
     // 对应公式为 当前值-最小值/最大值-最小值 = slider进度width / slider总width
     // trunk left = slider进度width + trunk宽度/2
     curVal() {
-      return this.cur;  
+      return this.cur;
     },
     scale() {
       return (this.cur - this.min) / (this.max - this.min);
