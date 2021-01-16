@@ -45,7 +45,7 @@
           <div class="center-box ml-3">
             <div class="mb-2">
               <dv-border-box-7>
-                <bottomLeft :week="curWeek"></bottomLeft>
+                <centerUp :week="curWeek"></centerUp>
               </dv-border-box-7>
             </div>
             <div>
@@ -84,8 +84,9 @@ import centerLeft2 from "./centerLeft2";
 import centerRight1 from "./centerRight1";
 import centerRight2 from "./centerRight2";
 // import center from "./center";
-import bottomLeft from "./bottomLeft";
+// import bottomLeft from "./bottomLeft";
 // import bottomRight from "./bottomRight";
+import centerUp from "./centerUp";
 export default {
   data () {
     return {
@@ -108,8 +109,9 @@ export default {
     centerRight1,
     centerRight2,
     // center,
-    bottomLeft,
+    // bottomLeft,
     // bottomRight
+    centerUp,
   },
   mounted () {
     this.timeFn();
