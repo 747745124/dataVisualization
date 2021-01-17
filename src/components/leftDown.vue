@@ -1,9 +1,12 @@
 <template>
   <div id="leftDown">
     <div class="d-flex pt-1 pl-3">
-      <span style="color:rgba(0, 183, 255, 0.55)">
+      <span style="color: rgba(0, 183, 255, 0.55)">
         <icon name="chart-line"></icon>
       </span>
+      <div class="d-flex">
+        <span class="fs-xl text mx-2">疫情累计变化图</span>
+      </div>
     </div>
     <div>
       <Echart
@@ -120,7 +123,7 @@ export default {
               yAxisIndex: 0,
               itemStyle: {
                 normal: {
-                  color: "#F02FC2",
+                  color: "#920404",
                 },
               },
               data: newData.infected,
@@ -178,10 +181,10 @@ export default {
       };
       let weekStart = 1;
       let weekEnd = maxWeek;
-      if(week - deltaWeek > weekStart){
+      if (week - deltaWeek > weekStart) {
         weekStart = week - deltaWeek;
       }
-      if(week + deltaWeek < maxWeek){
+      if (week + deltaWeek < maxWeek) {
         weekEnd = week + deltaWeek;
       }
       for (let i = weekStart; i <= weekEnd; i++) {

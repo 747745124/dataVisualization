@@ -239,7 +239,7 @@ export default {
     margin-top: 4px;
   }
   .infected-num {
-    color: #f02fc2;
+    color: #920404;
     font-size: 14px;
     font-weight: bold;
     margin-top: 14px;

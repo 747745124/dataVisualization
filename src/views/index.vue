@@ -65,10 +65,14 @@
           <!-- 右侧 -->
           <div class="right-box ml-3">
             <div class="mb-2">
-              <dv-border-box-7 class="border-shadow"> </dv-border-box-7>
+              <dv-border-box-7 class="border-shadow">
+                <moodChart :week="curWeek"></moodChart>
+              </dv-border-box-7>
             </div>
             <div class="mb-2">
-              <dv-border-box-7 class="border-shadow"> </dv-border-box-7>
+              <dv-border-box-7 class="border-shadow">
+                <rightMiddle :week="curWeek"></rightMiddle>
+              </dv-border-box-7>
             </div>
             <div>
               <dv-border-box-7 class="border-shadow">
@@ -92,9 +96,11 @@ import { formatTime } from "../utils/index.js";
 // import bottomLeft from "./bottomLeft";
 // import bottomRight from "./bottomRight";
 import leftDown from "@/components/leftDown";
-import mapChart from "@/components/mapChart";
 import leftUp from "@/components/leftUp";
+import mapChart from "@/components/mapChart";
 import rightDown from "@/components/rightDown";
+import moodChart from "@/components/moodChart";
+import rightMiddle from "../components/rightMiddle.vue";
 export default {
   data() {
     return {
@@ -119,10 +125,12 @@ export default {
     // center,
     // bottomLeft,
     // bottomRight
+    rightMiddle,
     leftDown,
+    leftUp,
     rightDown,
     mapChart,
-    leftUp,
+    moodChart,
   },
   mounted() {
     this.timeFn();

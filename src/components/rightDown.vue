@@ -22,22 +22,7 @@ import Data from "@/static/data.json";
 export default {
   data() {
     return {
-      config: {
-        // "讨论人数"
-        header: ["话题", "讨论频次"],
-        topic1: "",
-        topic2: "",
-        topic3: "",
-        data: [],
-        rowNum: 3, //表格行数
-        headerHeight: 35,
-        headerBGC: "#0f1325", //表头
-        oddRowBGC: "#0f1325", //奇数行
-        evenRowBGC: "#171c33", //偶数行
-        index: true,
-        columnWidth: [50],
-        align: ["center"],
-      },
+      config: {},
     };
   },
   props: { week: Number },
@@ -55,13 +40,26 @@ export default {
   },
   methods: {
     setWeek(week) {
-      this.data[0][0] = Data.data[week - 1].twitter.topic[0];
-      this.data[1][0] = Data.data[week - 1].twitter.topic[1];
-      this.data[2][0] = Data.data[week - 1].twitter.topic[2];
-      let pair1 = [this.topic1, "<span  class='colorGrass'>↑75%</span>"];
-      let pair2 = [this.topic2, "<span  class='colorRed'>↓33%</span>"];
-      let pair3 = [this.topic3, "<span  class='colorGrass'>↑100%</span>"];
-      this.data.push(pair1, pair2, pair3);
+      this.config = {
+        // "讨论人数"
+        header: ["话题", "频次"],
+        topic1: "",
+        topic2: "",
+        topic3: "",
+        data: [
+          [Data.data[week - 1].twitter.topic[0], "<span  class='colorGrass'>↑75%</span>"],
+          [Data.data[week - 1].twitter.topic[1], "<span  class='colorRed'>↓33%</span>"],
+          [Data.data[week - 1].twitter.topic[2], "<span  class='colorGrass'>↑66%</span>"],
+        ],
+        rowNum: 2, //表格行数
+        headerHeight: 35,
+        headerBGC: "#0f1325", //表头
+        oddRowBGC: "#0f1325", //奇数行
+        evenRowBGC: "#171c33", //偶数行
+        index: true,
+        columnWidth: [50],
+        align: ["center"],
+      };
     },
   },
 };

@@ -4,7 +4,7 @@
       <Echart
         :options="options"
         id="centerUp"
-        height="6rem"
+        height="6.8rem"
         width="100%"
       ></Echart>
     </div>
@@ -80,8 +80,8 @@ export default {
         return a[1] - b[1];
       });
 
-      let visualMapSet = this.getVisualMap("infected");
-      let valueSeries = this.getValueSeries("infected", week);
+      let visualMapSet = this.getVisualMap("inflected");
+      let valueSeries = this.getValueSeries("inflected", week);
       // 获取心情百分比，越接近1越消极
       let moodPercent =
         (dataJson.data[weekNum].twitter.moodIndex - this.minMoodIndex) /
@@ -123,7 +123,7 @@ export default {
           },
           label: {
             show: true,
-            color: "rgba(0,0,0,0.4)",
+            color: "rgba(255,255,255,1)",
           },
           emphasis: {
             itemStyle: {
@@ -247,40 +247,49 @@ export default {
         return {
           min: 0,
           max: 70000,
-          left: "left",
-          top: "bottom",
+          left: "7%",
+          top: "10%",
           text: ["High", "Low"],
           seriesIndex: [1],
           inRange: {
-            color: ["#ccccff", "#eeeeff"],
+            color: ["#06cd43", "#b0aa0a", "#920404"],
           },
           calculable: true,
+          textStyle: {
+            color: "white",
+          },
         };
       } else if (order == "death") {
         return {
           min: 0,
-          max: 500,
-          left: "left",
-          top: "bottom",
+          max: 6000,
+          left: "7%",
+          top: "10%",
           text: ["High", "Low"],
           seriesIndex: [1],
           inRange: {
-            color: ["#e0ffff", "#006edd"],
+            color: ["#00a4f9", "#956fd4", "#653fa5"],
           },
           calculable: true,
+          textStyle: {
+            color: "white",
+          },
         };
       } else if (order == "cured") {
         return {
           min: 0,
-          max: 500,
-          left: "left",
-          top: "bottom",
+          max: 17000,
+          left: "7%",
+          top: "10%",
           text: ["High", "Low"],
           seriesIndex: [1],
           inRange: {
-            color: ["#e0ffff", "#006edd"],
+            color: ["#aee3ff", "#3EACE5", "#0168f4"],
           },
           calculable: true,
+          textStyle: {
+            color: "white",
+          },
         };
       }
     },
@@ -315,7 +324,7 @@ export default {
           data: set,
         };
       } else if (order == "cured") {
-        let set = [];
+        let set = [];    
         for (let i = 0; i < this.boroughsName.length; i++) {
           set.push({
             name: this.boroughsName[i],
