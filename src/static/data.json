@@ -560,6 +560,516 @@
                     "#COVID"
                 ]
             }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 6533,
+                    "death": 103,
+                    "cured": 1734
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 6048,
+                    "death": 77,
+                    "cured": 1399
+                },
+                {
+                    "name": "Queens",
+                    "infected": 10817,
+                    "death": 158,
+                    "cured": 2692
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 10442,
+                    "death": 138,
+                    "cured": 2278
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 2555,
+                    "death": 32,
+                    "cured": 366
+                },
+                {
+                    "name": "Total",
+                    "infected": 36397,
+                    "death": 508,
+                    "cured": 8469
+                }
+            ],
+            "week": 12,
+            "twitter": {
+                "topTwitter": "Somebody called this Quarantine day 2 and I want to be the first one to let you know you late and you nasty",
+                "total": 3616,
+                "moodIndex": 0.3113,
+                "topic": [
+                    "#Coronavirus",
+                    "#Quarantine",
+                    "#COVID"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 13919,
+                    "death": 559,
+                    "cured": 4125
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 10124,
+                    "death": 347,
+                    "cured": 2945
+                },
+                {
+                    "name": "Queens",
+                    "infected": 21761,
+                    "death": 802,
+                    "cured": 6287
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 20109,
+                    "death": 797,
+                    "cured": 5656
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 4724,
+                    "death": 128,
+                    "cured": 813
+                },
+                {
+                    "name": "Total",
+                    "infected": 70640,
+                    "death": 2633,
+                    "cured": 19826
+                }
+            ],
+            "week": 13,
+            "twitter": {
+                "topTwitter": "There needs to be a ticker tape parade for all the doctors, nurses, medical staff, EMS workers, cops, firefighters, transit workers, grocers, office cleaners and medical researchers when this virus is beaten.",
+                "total": 3703,
+                "moodIndex": 0.2756,
+                "topic": [
+                    "#Coronavirus",
+                    "#COVID",
+                    "#Pandemic"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 22777,
+                    "death": 1342,
+                    "cured": 6629
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 14064,
+                    "death": 837,
+                    "cured": 4517
+                },
+                {
+                    "name": "Queens",
+                    "infected": 33408,
+                    "death": 2007,
+                    "cured": 10004
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 29394,
+                    "death": 1961,
+                    "cured": 8735
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 8028,
+                    "death": 314,
+                    "cured": 1297
+                },
+                {
+                    "name": "Total",
+                    "infected": 107474,
+                    "death": 6461,
+                    "cured": 31182
+                }
+            ],
+            "week": 14,
+            "twitter": {
+                "topTwitter": "New: America’s top infectious disease expert, Dr. Anthony Fauci, said moments ago on CNN that the ENTIRE country should be under stay-at-home orders to contain the spread of coronavirus.",
+                "total": 3297,
+                "moodIndex": 0.3162,
+                "topic": [
+                    "#TrumpPressConference",
+                    "#COVID",
+                    "#Coronavirus"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 29887,
+                    "death": 2136,
+                    "cured": 8505
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 16938,
+                    "death": 1278,
+                    "cured": 5724
+                },
+                {
+                    "name": "Queens",
+                    "infected": 41668,
+                    "death": 3178,
+                    "cured": 12721
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 36729,
+                    "death": 3131,
+                    "cured": 11051
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 9983,
+                    "death": 485,
+                    "cured": 1649
+                },
+                {
+                    "name": "Total",
+                    "infected": 135211,
+                    "death": 10208,
+                    "cured": 39650
+                }
+            ],
+            "week": 15,
+            "twitter": {
+                "topTwitter": "What do we have to do to get the damn US Federal Government to get a damn Covid-19 test mass produced immediately and easily accessible to every US citizen? Why does it seem like the Federal Government STILL can’t get ahead of this?  Why do I have to post this? #getusadamntest",
+                "total": 3623,
+                "moodIndex": 0.3167,
+                "topic": [
+                    "#COVID",
+                    "#TrumpPressConference",
+                    "#Coronavirus"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 35377,
+                    "death": 2665,
+                    "cured": 9650
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 19125,
+                    "death": 1612,
+                    "cured": 6432
+                },
+                {
+                    "name": "Queens",
+                    "infected": 48748,
+                    "death": 4017,
+                    "cured": 14301
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 42514,
+                    "death": 3903,
+                    "cured": 12410
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 11373,
+                    "death": 593,
+                    "cured": 1858
+                },
+                {
+                    "name": "Total",
+                    "infected": 157144,
+                    "death": 12790,
+                    "cured": 44651
+                }
+            ],
+            "week": 16,
+            "twitter": {
+                "topTwitter": "Trump wants people to think that 3.5 million tests is some sort of success. Reminder: Mike Pence pledged 4 million tests would be completed 34 days ago. This is a massive failure by his government.",
+                "total": 3329,
+                "moodIndex": 0.3378,
+                "topic": [
+                    "#TrumpPressConference",
+                    "#COVID",
+                    "#Coronavirus"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 39080,
+                    "death": 3045,
+                    "cured": 10336
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 21090,
+                    "death": 1878,
+                    "cured": 6849
+                },
+                {
+                    "name": "Queens",
+                    "infected": 53495,
+                    "death": 4635,
+                    "cured": 15121
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 46666,
+                    "death": 4455,
+                    "cured": 13185
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 12138,
+                    "death": 667,
+                    "cured": 2005
+                },
+                {
+                    "name": "Total",
+                    "infected": 172476,
+                    "death": 14680,
+                    "cured": 47496
+                }
+            ],
+            "week": 17,
+            "twitter": {
+                "topTwitter": "Everyone: thank God we have the NFL Draft to temporarily distract us from a devastating global pandemic!   ESPN: lets talk cancer, death and depression... shall we?",
+                "total": 2759,
+                "moodIndex": 0.2710,
+                "topic": [
+                    "#NFLDraft",
+                    "#COVID",
+                    "#Coronavirus"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 41349,
+                    "death": 3300,
+                    "cured": 10771
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 22414,
+                    "death": 2049,
+                    "cured": 7074
+                },
+                {
+                    "name": "Queens",
+                    "infected": 56632,
+                    "death": 5056,
+                    "cured": 15628
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 49618,
+                    "death": 4795,
+                    "cured": 13650
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 12670,
+                    "death": 741,
+                    "cured": 2103
+                },
+                {
+                    "name": "Total",
+                    "infected": 182690,
+                    "death": 15941,
+                    "cured": 49226
+                }
+            ],
+            "week": 18,
+            "twitter": {
+                "topTwitter": "Idk why MJ said people would like him less after this doc. Not only has he (somehow) gotten cooler and (somehow) more legendary... he’s humanized himself and his fame at the same time.   Absolutely iconic.",
+                "total": 2137,
+                "moodIndex": 0.2619,
+                "topic": [
+                    "#NYC",
+                    "#COVID",
+                    "#Maskup"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 43191,
+                    "death": 3446,
+                    "cured": 11048
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 23313,
+                    "death": 2154,
+                    "cured": 7224
+                },
+                {
+                    "name": "Queens",
+                    "infected": 58673,
+                    "death": 5291,
+                    "cured": 15921
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 51844,
+                    "death": 5027,
+                    "cured": 14004
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 12945,
+                    "death": 776,
+                    "cured": 2169
+                },
+                {
+                    "name": "Total",
+                    "infected": 189973,
+                    "death": 16694,
+                    "cured": 50366
+                }
+            ],
+            "week": 19,
+            "twitter": {
+                "topTwitter": "I think I’m in love with Phil... @CrystalMethyd #DragRace",
+                "total": 2011,
+                "moodIndex": 0.2703,
+                "topic": [
+                    "#NYC",
+                    "#COVID",
+                    "#DragRace"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 44437,
+                    "death": 3554,
+                    "cured": 11223
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 24162,
+                    "death": 2233,
+                    "cured": 7346
+                },
+                {
+                    "name": "Queens",
+                    "infected": 60325,
+                    "death": 5445,
+                    "cured": 16142
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 53656,
+                    "death": 5165,
+                    "cured": 14234
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 13191,
+                    "death": 806,
+                    "cured": 2212
+                },
+                {
+                    "name": "Total",
+                    "infected": 195778,
+                    "death": 17203,
+                    "cured": 51157
+                }
+            ],
+            "week": 20,
+            "twitter": {
+                "topTwitter": "Where’s Hunter?",
+                "total": 2361,
+                "moodIndex": 0.2794,
+                "topic": [
+                    "#COVID",
+                    "#Vote",
+                    "#Rhony"
+                ]
+            }
+        },
+        {
+            "virusdata": [
+                {
+                    "name": "Bronx",
+                    "infected": 44437,
+                    "death": 3554,
+                    "cured": 11223
+                },
+                {
+                    "name": "Manhattan",
+                    "infected": 24162,
+                    "death": 2233,
+                    "cured": 7346
+                },
+                {
+                    "name": "Queens",
+                    "infected": 60325,
+                    "death": 5445,
+                    "cured": 16142
+                },
+                {
+                    "name": "Brooklyn",
+                    "infected": 53656,
+                    "death": 5165,
+                    "cured": 14234
+                },
+                {
+                    "name": "Staten Island",
+                    "infected": 13191,
+                    "death": 806,
+                    "cured": 2212
+                },
+                {
+                    "name": "Total",
+                    "infected": 201071,
+                    "death": 17556,
+                    "cured": 51768
+                }
+            ],
+            "week": 21,
+            "twitter": {
+                "topTwitter": "Twitter putting a weak disclaimer on a Trump tweet feels like Susan Collins has been put in charge at Twitter",
+                "total": 2041,
+                "moodIndex": 0.2708,
+                "topic": [
+                    "#COVID",
+                    "#Vote",
+                    "#Rhony"
+                ]
+            }
         }
     ]
 }

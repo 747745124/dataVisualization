@@ -45,7 +45,8 @@
                   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
                   border: 1px solid rgba(0, 0, 0, 0.3);
                   background-color: #33333333;
-                ">
+                "
+              >
                 <leftDown :week="curWeek"></leftDown>
               </dv-border-box-7>
             </div>
@@ -59,7 +60,8 @@
                   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
                   border: 1px solid rgba(0, 0, 0, 0.3);
                   background-color: #33333333;
-                ">
+                "
+              >
                 <mapChart :week="curWeek"></mapChart>
               </dv-border-box-7>
             </div>
@@ -69,11 +71,12 @@
                   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
                   border: 1px solid rgba(0, 0, 0, 0.3);
                   background-color: #33333333;
-                ">
+                "
+              >
                 <!-- 时间滚动条 -->
                 <slider-bar
                   :min="1"
-                  :max="11"
+                  :max="21"
                   v-model="startWeek"
                   @onSlide="updateWeek"
                 ></slider-bar>
@@ -89,7 +92,8 @@
                   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
                   border: 1px solid rgba(0, 0, 0, 0.3);
                   background-color: #33333333;
-                ">
+                "
+              >
                 <rightUp :week="curWeek"></rightUp>
               </dv-border-box-7>
             </div>
@@ -99,7 +103,9 @@
                   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
                   border: 1px solid rgba(0, 0, 0, 0.3);
                   background-color: #33333333;
-                "> </dv-border-box-7>
+                "
+              >
+              </dv-border-box-7>
             </div>
             <div>
               <dv-border-box-7
@@ -107,7 +113,10 @@
                   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
                   border: 1px solid rgba(0, 0, 0, 0.3);
                   background-color: #33333333;
-                "> </dv-border-box-7>
+                "
+              >
+                <rightDown :week="curWeek"></rightDown>
+              </dv-border-box-7>
             </div>
           </div>
         </div>
@@ -128,6 +137,7 @@ import { formatTime } from "../utils/index.js";
 import leftDown from "@/components/leftDown";
 import mapChart from "@/components/mapChart";
 import rightUp from "@/components/rightUp";
+import rightDown from "@/components/rightDown";
 export default {
   data() {
     return {
@@ -137,7 +147,7 @@ export default {
       dateWeek: null,
       weekday: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
       //字符串
-      title: "当我们在做数据可视化的时候我们是在生产什么垃圾",
+      title: "当疫情发生的时候我们在想什么",
       groupMember: "李绍康 朱晴川 席昊",
       startWeek: 1,
       curWeek: 1, //当前周
@@ -152,6 +162,7 @@ export default {
     // bottomLeft,
     // bottomRight
     leftDown,
+    rightDown,
     mapChart,
     rightUp,
   },
