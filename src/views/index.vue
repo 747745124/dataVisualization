@@ -2,13 +2,13 @@
 <template>
   <div id="index">
     <dv-full-screen-container class="bg">
-      <dv-loading v-if="loading">Loading...</dv-loading>
+      <dv-loading style="height:85%;" v-if="loading">Loading...</dv-loading>
       <div v-else class="host-body">
         <!-- 第一行 标题 -->
         <div class="d-flex jc-between px-2">
           <div class="d-flex" style="width: 45%">
             <div
-              class="react-right bg-color-blue ml-4"
+              class="react-right bg-color-blue ml-3"
               style="width: 24rem; text-align: left"
             >
               <span class="react-before bg-color-blue"></span>
@@ -17,7 +17,7 @@
           </div>
           <div class="d-flex" style="width: 45%">
             <div
-              class="react-left mr-4"
+              class="react-left mr-3"
               style="width: 16rem; background-color: #0f1325; text-align: right"
             >
               <span class="react-after"></span>
@@ -30,22 +30,10 @@
           <!-- 左侧 -->
           <div class="left-box">
             <div class="mb-2">
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                "
-              >
-              </dv-border-box-7>
+              <dv-border-box-7 class="border-shadow"> </dv-border-box-7>
             </div>
             <div>
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                ">
+              <dv-border-box-7 class="border-shadow">
                 <leftDown :week="curWeek"></leftDown>
               </dv-border-box-7>
             </div>
@@ -54,22 +42,12 @@
           <!-- 中间 -->
           <div class="center-box ml-3">
             <div class="mb-2">
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                ">
+              <dv-border-box-7 class="border-shadow">
                 <mapChart :week="curWeek"></mapChart>
               </dv-border-box-7>
             </div>
             <div>
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                ">
+              <dv-border-box-7 class="border-shadow">
                 <!-- 时间滚动条 -->
                 <slider-bar
                   :min="1"
@@ -84,30 +62,17 @@
           <!-- 右侧 -->
           <div class="right-box ml-3">
             <div class="mb-2">
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                ">
+              <dv-border-box-7 class="border-shadow">
                 <rightUp :week="curWeek"></rightUp>
               </dv-border-box-7>
             </div>
             <div class="mb-2">
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                "> </dv-border-box-7>
+              <dv-border-box-7 class="border-shadow">
+              </dv-border-box-7>
             </div>
             <div>
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                "> </dv-border-box-7>
+              <dv-border-box-7 class="border-shadow">
+              </dv-border-box-7>
             </div>
           </div>
         </div>
@@ -186,4 +151,9 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/index.scss";
+.border-shadow {
+  box-shadow: #FFFFFF44 0px 0px 20px inset;
+  border: 1px solid #FFFFFF54;
+  background-color: #22222222;
+}
 </style>
