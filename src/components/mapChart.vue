@@ -20,6 +20,7 @@ import * as Icons from "@/static/icon.js";
 export default {
   props: {
     week: Number,
+    order: String,
   },
   data() {
     return {
@@ -50,6 +51,12 @@ export default {
         this.setWeekData(newWeek);
       },
     },
+    order:{
+      handler() {
+        // 当周数发生变动时，重设数据
+        this.setWeekData(this.week);
+      },
+    }
   },
   components: {
     Echart,
@@ -80,8 +87,8 @@ export default {
         return a[1] - b[1];
       });
 
-      let visualMapSet = this.getVisualMap("inflected");
-      let valueSeries = this.getValueSeries("inflected", week);
+      let visualMapSet = this.getVisualMap(this.order);
+      let valueSeries = this.getValueSeries(this.order, week);
       // 获取心情百分比，越接近1越消极
       let moodPercent =
         (dataJson.data[weekNum].twitter.moodIndex - this.minMoodIndex) /

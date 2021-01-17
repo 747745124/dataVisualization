@@ -26,7 +26,7 @@
           </span>
         </div>
       </div>
-       )
+      )
     </div>
     <div class="death-num d-flex jc-center">
       死亡数：{{ deathNum }} ( 新增：{{ deathNumWeek }}
@@ -48,7 +48,7 @@
           </span>
         </div>
       </div>
-       )
+      )
     </div>
     <div class="cured-num d-flex jc-center">
       治愈数：{{ curedNum }} ( 新增：{{ curedNumWeek }}
@@ -70,7 +70,7 @@
           </span>
         </div>
       </div>
-       )
+      )
     </div>
   </div>
 </template>
