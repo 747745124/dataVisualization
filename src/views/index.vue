@@ -73,7 +73,7 @@
                 <!-- 时间滚动条 -->
                 <slider-bar
                   :min="1"
-                  :max="11"
+                  :max="21"
                   v-model="startWeek"
                   @onSlide="updateWeek"
                 ></slider-bar>
