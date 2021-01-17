@@ -131,6 +131,7 @@ export default {
 .slider .block {
   width: 60px;
   height: 20px;
+  margin-left: -20px;
   border-radius: 10px;
   border: 2px solid #409eff;
   color: #409eff;
