@@ -17,15 +17,16 @@
 export default {
   data() {
     return {
-      beforeYear: "2020",
-      beforeMonth: "10",
-      beforeDay: "20",
-      afterYear: "2020",
-      afterMonth: "11",
-      afterDay: "20",
+      beforeYear: null,
+      beforeMonth: null,
+      beforeDay: null,
+      afterYear: null,
+      afterMonth: null,
+      afterDay: null,
       beforeTimeString: null,
       afterTimeString: null,
       weekString: null,
+      monthDay: [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
     };
   },
   components: {},
@@ -46,11 +47,32 @@ export default {
   methods: {
     // 初始化为第一周
     setWeek(week) {
-      this.afterDay = week;
-      //字符串
-      this.beforeTimeString = this.beforeYear + "年" + this.beforeMonth + "月" + this.beforeDay + "日";
-      this.afterTimeString = this.afterYear + "年" + this.afterMonth + "月" + this.afterDay + "日";
-      this.weekString = "第" + week + "周";
+        //根据周数获得日期
+        this.beforeYear = "2020";
+        this.afterYear = "2020";
+
+        let startDay = week * 7 - 1 - 5;
+        for(let m = 1;m <= 12; m++){
+            this.beforeDay = startDay;
+            startDay -= this.monthDay[m];
+            if(startDay < 0){
+                this.beforeMonth = m;
+                break;
+            }
+        }
+        let endDay = week * 7 + 6 - 5;
+        for(let m = 1;m <= 12; m++){
+            this.afterDay = endDay;
+            endDay -= this.monthDay[m];
+            if(endDay < 0){
+                this.afterMonth = m;
+                break;
+            }
+        }
+        //字符串
+        this.beforeTimeString = this.beforeYear + "年" + this.beforeMonth + "月" + this.beforeDay + "日";
+        this.afterTimeString = this.afterYear + "年" + this.afterMonth + "月" + this.afterDay + "日";
+        this.weekString = "第" + week + "周";
     },
   },
 };
