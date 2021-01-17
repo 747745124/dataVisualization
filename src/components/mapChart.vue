@@ -83,24 +83,24 @@ export default {
       let visualMapSet = this.getVisualMap("infected");
       let valueSeries = this.getValueSeries("infected", week);
       // 获取心情百分比，越接近1越消极
-      let moodPercent = (dataJson.data[weekNum].twitter.moodIndex - this.minMoodIndex) / (this.maxMoodIndex - this.minMoodIndex);
+      let moodPercent =
+        (dataJson.data[weekNum].twitter.moodIndex - this.minMoodIndex) /
+        (this.maxMoodIndex - this.minMoodIndex);
 
       const seriesSet = [
         {
           name: "twitter",
           type: "scatter",
           encode: {
-            tooltip: [0,1]
+            tooltip: [0, 1],
           },
           coordinateSystem: "geo",
           data: this.pointsData,
           symbolSize: 15,
           colorAlpha: 1,
-          symbol: function(){
-            if(Math.random() > moodPercent)
-              return Icons.positiveIcon;
-            else
-              return Icons.negativeIcon;
+          symbol: function () {
+            if (Math.random() > moodPercent) return Icons.positiveIcon;
+            else return Icons.negativeIcon;
           },
         },
         valueSeries,
@@ -246,7 +246,7 @@ export default {
       if (order == "infected") {
         return {
           min: 0,
-          max: 700000,
+          max: 70000,
           left: "left",
           top: "bottom",
           text: ["High", "Low"],

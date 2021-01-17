@@ -3,17 +3,14 @@
     <div class="week-string d-flex jc-center">
       {{ weekString }}
     </div>
-    <div class="before-time-string d-flex jc-center">
-      {{ beforeTimeString }}
-    </div>
-    <div class="after-time-string d-flex jc-center">
-      {{ afterTimeString }}
+    <div class="time-string d-flex jc-center">
+      {{ beforeTimeString + "   ~   " + afterTimeString }}
     </div>
     <div class="infected-num d-flex">
-      感染数：{{ infectedNum }}
+      感染数：{{ infectedNum }} 新增：{{ infectedNumWeek }}
       <div>
         <div v-if="infectedChange == 1">
-          <!-- 根据感染数是否增加判断箭头方向 -->
+          <!-- 根据新增感染数是否增加判断箭头方向 -->
           <span class="ml-3" style="color: #ff0000aa">
             <icon name="arrow-up"></icon>
           </span>
@@ -31,10 +28,10 @@
       </div>
     </div>
     <div class="death-num d-flex">
-      死亡数：{{ deathNum }}
+      死亡数：{{ deathNum }} 新增：{{ deathNumWeek }}
       <div>
         <div v-if="deathChange == 1">
-          <!-- 根据死亡数是否增加判断箭头方向 -->
+          <!-- 根据新增死亡数是否增加判断箭头方向 -->
           <span class="ml-3" style="color: #ff0000aa">
             <icon name="arrow-up"></icon>
           </span>
@@ -52,10 +49,10 @@
       </div>
     </div>
     <div class="cured-num d-flex">
-      治愈数：{{ curedNum }}
+      治愈数：{{ curedNum }} 新增：{{ curedNumWeek }}
       <div>
         <div v-if="curedChange == 1">
-          <!-- 根据治愈数是否增加判断箭头方向 -->
+          <!-- 根据新增治愈数是否增加判断箭头方向 -->
           <span class="ml-3" style="color: #0000ee">
             <icon name="arrow-up"></icon>
           </span>
@@ -93,6 +90,9 @@ export default {
       infectedNum: null,
       deathNum: null,
       curedNum: null,
+      infectedNumWeek: null,
+      deathNumWeek: null,
+      curedNumWeek: null,
       infectedChange: 0,
       deathChange: 0,
       curedChange: 0,
@@ -154,27 +154,66 @@ export default {
       this.infectedNum = Data.data[week - 1].virusdata[5].infected;
       this.deathNum = Data.data[week - 1].virusdata[5].death;
       this.curedNum = Data.data[week - 1].virusdata[5].cured;
+      //新增
+      //第一周也是0
+      if (week > 1) {
+        this.infectedNumWeek =
+          Data.data[week - 1].virusdata[5].infected -
+          Data.data[week - 2].virusdata[5].infected;
+        this.deathNumWeek =
+          Data.data[week - 1].virusdata[5].death -
+          Data.data[week - 2].virusdata[5].death;
+        this.curedNumWeek =
+          Data.data[week - 1].virusdata[5].cured -
+          Data.data[week - 2].virusdata[5].cured;
+      } else {
+        this.infectedNumWeek = 0;
+        this.deathNumWeek = 0;
+        this.curedNumWeek = 0;
+      }
 
       this.infectedChange = 0;
       this.deathChange = 0;
       this.curedChange = 0;
       //变化箭头
-      if (week > 1) {
-        if (this.infectedNum > Data.data[week - 2].virusdata[5].infected) {
+      if (week > 2) {
+        if (
+          this.infectedNum - Data.data[week - 2].virusdata[5].infected >
+          Data.data[week - 2].virusdata[5].infected -
+            Data.data[week - 3].virusdata[5].infected
+        ) {
           this.infectedChange = 1;
         } else if (
-          this.infectedNum < Data.data[week - 2].virusdata[5].infected
+          this.infectedNum - Data.data[week - 2].virusdata[5].infected <
+          Data.data[week - 2].virusdata[5].infected -
+            Data.data[week - 3].virusdata[5].infected
         ) {
           this.infectedChange = -1;
         }
-        if (this.deathNum > Data.data[week - 2].virusdata[5].death) {
+        if (
+          this.deathNum - Data.data[week - 2].virusdata[5].death >
+          Data.data[week - 2].virusdata[5].death -
+            Data.data[week - 3].virusdata[5].death
+        ) {
           this.deathChange = 1;
-        } else if (this.deathNum < Data.data[week - 2].virusdata[5].death) {
+        } else if (
+          this.deathNum - Data.data[week - 2].virusdata[5].death <
+          Data.data[week - 2].virusdata[5].death -
+            Data.data[week - 3].virusdata[5].death
+        ) {
           this.deathChange = -1;
         }
-        if (this.curedNum > Data.data[week - 2].virusdata[5].cured) {
+        if (
+          this.curedNum - Data.data[week - 2].virusdata[5].cured >
+          Data.data[week - 2].virusdata[5].cured -
+            Data.data[week - 3].virusdata[5].cured
+        ) {
           this.curedChange = 1;
-        } else if (this.infectedNum < Data.data[week - 2].virusdata[5].cured) {
+        } else if (
+          this.curedNum - Data.data[week - 2].virusdata[5].cured <
+          Data.data[week - 2].virusdata[5].cured -
+            Data.data[week - 3].virusdata[5].cured
+        ) {
           this.curedChange = -1;
         }
       }
@@ -186,19 +225,10 @@ export default {
 <style lang="scss">
 #leftUp {
   padding-top: 0.3rem;
-  .before-time-string {
+  .time-string {
     color: #b4b4b4;
     font-size: 16px;
-    margin-left: 20px;
-    margin-top: 24px;
-    float: left;
-  }
-  .after-time-string {
-    color: #b4b4b4;
-    font-size: 16px;
-    margin-right: 20px;
-    margin-top: 24px;
-    float: right;
+    margin-top: 20px;
   }
   .week-string {
     color: #b4b4b4;
@@ -206,7 +236,7 @@ export default {
     margin-top: 4px;
   }
   .infected-num {
-    color: #F02FC2;
+    color: #f02fc2;
     font-size: 14px;
     font-weight: bold;
     margin-top: 14px;
@@ -215,7 +245,7 @@ export default {
     width: 80%;
   }
   .death-num {
-    color: #956FD4;
+    color: #956fd4;
     font-size: 14px;
     font-weight: bold;
     margin-top: 6px;
@@ -224,7 +254,7 @@ export default {
     width: 80%;
   }
   .cured-num {
-    color: #3EACE5;
+    color: #3eace5;
     font-size: 14px;
     font-weight: bold;
     margin-top: 6px;

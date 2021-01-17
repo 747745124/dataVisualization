@@ -104,7 +104,7 @@ export default {
 }
 .slider {
   position: relative;
-  margin-top: 21%;
+  margin-top: 12%;
   margin-left: 15%;
   width: 70%;
   height: 10px;
