@@ -199,7 +199,7 @@ export default {
   text-align: center;
   color: #e4e7ed;
   margin-top: 20px;
-  margin-left: 300px;
+  margin-left: 395px;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
