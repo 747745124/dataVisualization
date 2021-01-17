@@ -1,7 +1,7 @@
 <template>
   <div id="leftDown">
     <div class="d-flex pt-1 pl-1">
-      <span style="color:rgb(56, 0, 255)">
+      <span style="color:rgba(0, 183, 255, 0.55)">
         <icon name="chart-line"></icon>
       </span>
     </div>
@@ -9,8 +9,8 @@
       <Echart
         :options="options"
         id="leftDownChart"
-        height="5.8rem"
-        width="90%"
+        height="5.5rem"
+        width="7rem"
       ></Echart>
     </div>
   </div>
@@ -71,8 +71,8 @@ export default {
           },
           grid: {
             x: "15%",
-            width: "80%",
-            y: "10%",
+            width: "75%",
+            y: "12%",
           },
           xAxis: {
             data: newData.city,

@@ -97,7 +97,7 @@ export default {
 }
 .slider {
   position: relative;
-  margin-top: 10%;
+  margin-top: 21%;
   margin-left: 15%;
   width: 70%;
   height: 10px;
@@ -117,7 +117,7 @@ export default {
 .slider .thunk {
   position: absolute;
   left: 100px;
-  top: -7px;
+  top: -5px;
   width: 20px;
   height: 20px;
 }
@@ -127,17 +127,18 @@ export default {
   border-radius: 50%;
   border: 2px solid #409eff;
   background: rgba(255, 255, 255, 1);
+  -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 .slider .tips {
   position: absolute;
-  left: -7px;
-  bottom: 30px;
+  left: -1px;
+  bottom: -34px;
   min-width: 15px;
   text-align: center;
   padding: 4px 8px;
   background: #000;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 24px;
   color: #fff;
 }
@@ -150,6 +151,7 @@ export default {
   color: #000;
 }
 .slider .block:hover {
+  -webkit-transform: scale(1.1);
   transform: scale(1.1);
   opacity: 0.6;
 }
