@@ -33,13 +33,7 @@
               <dv-border-box-7 class="border-shadow"> </dv-border-box-7>
             </div>
             <div>
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                "
-              >
+              <dv-border-box-7 class="border-shadow">
                 <leftDown :week="curWeek"></leftDown>
               </dv-border-box-7>
             </div>
@@ -48,24 +42,12 @@
           <!-- 中间 -->
           <div class="center-box ml-3">
             <div class="mb-2">
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                "
-              >
+              <dv-border-box-7 class="border-shadow">
                 <mapChart :week="curWeek"></mapChart>
               </dv-border-box-7>
             </div>
             <div>
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                "
-              >
+              <dv-border-box-7 class="border-shadow">
                 <!-- 时间滚动条 -->
                 <slider-bar
                   :min="1"
@@ -80,34 +62,16 @@
           <!-- 右侧 -->
           <div class="right-box ml-3">
             <div class="mb-2">
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                "
-              >
+              <dv-border-box-7 class="border-shadow">
                 <rightUp :week="curWeek"></rightUp>
               </dv-border-box-7>
             </div>
             <div class="mb-2">
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                "
-              >
+              <dv-border-box-7 class="border-shadow">
               </dv-border-box-7>
             </div>
             <div>
-              <dv-border-box-7
-                style="
-                  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 20px inset;
-                  border: 1px solid rgba(0, 0, 0, 0.3);
-                  background-color: #33333333;
-                "
-              >
+              <dv-border-box-7 class="border-shadow">
                 <rightDown :week="curWeek"></rightDown>
               </dv-border-box-7>
             </div>

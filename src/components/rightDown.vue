@@ -90,31 +90,31 @@ export default {
 </script>
 
 <style lang="scss">
-#leftUp {
-  padding-top: 0.3rem;
-  .before-time-string {
-    color: #b4b4b4;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-top: 24px;
-    float: left;
-  }
-  #tilde {
-    font-size: 32px !important;
-    margin-left: 3px !important;
-    margin-right: 3px !important;
-  }
-  .after-time-string {
-    color: #b4b4b4;
-    font-size: 20px;
-    margin-right: 20px;
-    margin-top: 24px;
-    float: right;
-  }
-  .week-string {
-    color: #ffffff;
-    font-size: 24px;
-    margin-top: 8px;
-  }
-}
+// #leftUp {
+//   padding-top: 0.3rem;
+//   .before-time-string {
+//     color: #b4b4b4;
+//     font-size: 20px;
+//     margin-left: 20px;
+//     margin-top: 24px;
+//     float: left;
+//   }
+//   #tilde {
+//     font-size: 32px !important;
+//     margin-left: 3px !important;
+//     margin-right: 3px !important;
+//   }
+//   .after-time-string {
+//     color: #b4b4b4;
+//     font-size: 20px;
+//     margin-right: 20px;
+//     margin-top: 24px;
+//     float: right;
+//   }
+//   .week-string {
+//     color: #ffffff;
+//     font-size: 24px;
+//     margin-top: 8px;
+//   }
+// }
 </style>

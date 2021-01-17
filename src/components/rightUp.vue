@@ -5,10 +5,6 @@
     </div>
     <div class="before-time-string d-flex jc-center">
       {{ beforeTimeString }}
-      <!-- + "  ~  " -->
-    </div>
-    <div id="tilde" class="before-time-string d-flex jc-center">
-      {{ " ~ " }}
     </div>
     <div class="after-time-string d-flex jc-center">
       {{ afterTimeString }}
@@ -18,17 +14,17 @@
       <div>
         <div v-if="infectedChange == 1">
           <!-- 根据感染数是否增加判断箭头方向 -->
-          <span class="ml-2" style="color: #ff0000aa">
+          <span class="ml-3" style="color: #ff0000aa">
             <icon name="arrow-up"></icon>
           </span>
         </div>
         <div v-else-if="infectedChange == 0">
-          <span class="ml-2">
+          <span class="ml-3">
             <icon name="arrow-right" style="color: #00ff0099"></icon>
           </span>
         </div>
         <div v-else-if="infectedChange == -1">
-          <span class="ml-2">
+          <span class="ml-3">
             <icon name="arrow-down" style="color: #0000ee"></icon>
           </span>
         </div>
@@ -39,17 +35,17 @@
       <div>
         <div v-if="deathChange == 1">
           <!-- 根据死亡数是否增加判断箭头方向 -->
-          <span class="ml-2" style="color: #ff0000aa">
+          <span class="ml-3" style="color: #ff0000aa">
             <icon name="arrow-up"></icon>
           </span>
         </div>
         <div v-else-if="deathChange == 0">
-          <span class="ml-2">
+          <span class="ml-3">
             <icon name="arrow-right" style="color: #00ff0099"></icon>
           </span>
         </div>
         <div v-else-if="deathChange == -1">
-          <span class="ml-2">
+          <span class="ml-3">
             <icon name="arrow-down" style="color: #0000ee"></icon>
           </span>
         </div>
@@ -60,17 +56,17 @@
       <div>
         <div v-if="curedChange == 1">
           <!-- 根据治愈数是否增加判断箭头方向 -->
-          <span class="ml-2" style="color: #0000ee">
+          <span class="ml-3" style="color: #0000ee">
             <icon name="arrow-up"></icon>
           </span>
         </div>
         <div v-else-if="curedChange == 0">
-          <span class="ml-2">
+          <span class="ml-3">
             <icon name="arrow-right" style="color: #00ff0099"></icon>
           </span>
         </div>
         <div v-else-if="curedChange == -1">
-          <span class="ml-2">
+          <span class="ml-3">
             <icon name="arrow-down" style="color: #ff0000aa"></icon>
           </span>
         </div>
@@ -197,11 +193,6 @@ export default {
     margin-top: 24px;
     float: left;
   }
-  #tilde {
-    font-size: 32px !important;
-    margin-left: 3px !important;
-    margin-right: 3px !important;
-  }
   .after-time-string {
     color: #b4b4b4;
     font-size: 16px;
@@ -212,27 +203,30 @@ export default {
   .week-string {
     color: #b4b4b4;
     font-size: 24px;
-    margin-top: 8px;
+    margin-top: 4px;
   }
   .infected-num {
-    color: #b4b4b4;
+    color: #F02FC2;
     font-size: 14px;
+    font-weight: bold;
     margin-top: 14px;
     float: left;
     margin-left: 50px;
     width: 80%;
   }
   .death-num {
-    color: #b4b4b4;
+    color: #956FD4;
     font-size: 14px;
+    font-weight: bold;
     margin-top: 6px;
     float: left;
     margin-left: 50px;
     width: 80%;
   }
   .cured-num {
-    color: #b4b4b4;
+    color: #3EACE5;
     font-size: 14px;
+    font-weight: bold;
     margin-top: 6px;
     float: left;
     margin-left: 50px;

@@ -96,7 +96,7 @@ export default {
           data: this.pointsData,
           symbolSize: 15,
           colorAlpha: 1,
-          symbol: function(param){
+          symbol: function(){
             if(Math.random() > moodPercent)
               return Icons.positiveIcon;
             else
