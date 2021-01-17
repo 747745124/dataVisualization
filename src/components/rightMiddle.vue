@@ -89,6 +89,7 @@ export default {
     height: 1.5rem;
     width: 5rem;
     margin-top: 0.2rem;
+    overflow: hidden;
   }
 }
 </style>
