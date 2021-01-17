@@ -19,8 +19,8 @@
           />
         </div>
       </div>
-      <div class="twitter-text">
-        <p class="ml-3 fw-b">{{ twitterText }}</p>
+      <div class="twitter-text fw-b">
+        {{ twitterText }}
       </div>
     </div>
   </div>
@@ -86,8 +86,8 @@ export default {
   }
   .twitter-text {
     color: #e4e7ed;
-    height: 100%;
-    width: 90%;
+    height: 1.5rem;
+    width: 5rem;
     margin-top: 0.2rem;
   }
 }
