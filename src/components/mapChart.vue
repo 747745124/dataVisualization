@@ -84,7 +84,7 @@ export default {
       let valueSeries = this.getValueSeries("infected", week);
       // 获取心情百分比，越接近1越消极
       let moodPercent = (dataJson.data[weekNum].twitter.moodIndex - this.minMoodIndex) / (this.maxMoodIndex - this.minMoodIndex);
-      console.log(moodPercent);
+
       const seriesSet = [
         {
           name: "twitter",
@@ -112,7 +112,7 @@ export default {
         tooltip: {},
         geo: {
           map: "New York",
-          zoom: 1.2, // 初始缩放大小
+          zoom: 1.1, // 初始缩放大小
           scaleLimit: {
             // 最大允许缩放
             min: 0.5,
