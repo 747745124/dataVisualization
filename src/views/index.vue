@@ -45,7 +45,7 @@
           <div class="center-box ml-3">
             <div class="mb-2">
               <dv-border-box-7>
-                <mapChart></mapChart>
+                <mapChart :week="curWeek"></mapChart>
               </dv-border-box-7>
             </div>
             <div>
