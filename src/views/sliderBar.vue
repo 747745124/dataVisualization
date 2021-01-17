@@ -75,6 +75,7 @@ export default {
       if (this.order == "infected") {
         this.order = "death";
         this.orderName = "死亡情况";
+        
       } else if (this.order == "death") {
         this.order = "cured";
         this.orderName = "治愈情况";
@@ -189,6 +190,7 @@ export default {
   opacity: 0.6;
 }
 .button {
+  cursor: pointer;
   border: none;
   background-color: #ffffff00;
   border-radius: 15px;
