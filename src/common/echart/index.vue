@@ -26,6 +26,10 @@ export default {
     options: {
       type: Object,
       default: ()=>({})
+    },
+    replace: {
+      type: Boolean,
+      default: true
     }
   },
   data () {
@@ -37,7 +41,7 @@ export default {
     options: {
       handler (options) {
         // 设置true清空echart缓存
-        this.chart.setOption(options, true)
+        this.chart.setOption(options, this.replace);
       },
       deep: true
     }
@@ -48,8 +52,8 @@ export default {
   methods: {
     initChart () {
       // 初始化echart
-      this.chart = this.$echarts.init(this.$el, 'tdTheme')
-      this.chart.setOption(this.options, true)
+      this.chart = this.$echarts.init(this.$el, 'tdTheme');
+      this.chart.setOption(this.options, true);
     }
   }
 }

@@ -6,6 +6,7 @@
         id="centerUp"
         height="7rem"
         width="100%"
+        :replace="false"
       ></Echart>
     </div>
   </div>
@@ -30,7 +31,9 @@ export default {
         { name: "Brooklyn", value: 4 },
         { name: "Staten Island", value: 5 },
       ],
+      maxTwitterNum: 0, // 每周最大推文数
       maxPointsData: [], // 最大可显示点数量
+      maxPointsNum: 100, // 总共最多点数量
       pointsData: [],
     };
   },
@@ -41,7 +44,7 @@ export default {
     week: {
       handler(newWeek) {
         // 当周数发生变动时，重设数据
-        this.setWeekData(newWeek);
+        this.setWeekData(newWeek, false);
       },
     },
   },
@@ -49,13 +52,17 @@ export default {
     Echart,
   },
   methods: {
-    setWeekData(week) {
+    setWeekData(week, firstInit) {
       let weekNum = week - 1;
-      let twitterNum = dataJson.data[weekNum].twitter.total / 5000 * 250;
-      if(twitterNum > 250) twitterNum = 250;
-      
+      let twitterNum = (dataJson.data[weekNum].twitter.total / this.maxTwitterNum) * this.maxPointsNum;
+      if (twitterNum > this.maxPointsNum) twitterNum = 250;
+
       // 随机从maxPointData中挑选出几个点
-      let shuffled = this.maxPointsData.slice(0), i = this.maxPointsData.length, min = i - twitterNum, temp, index;
+      let shuffled = this.maxPointsData.slice(0),
+        i = this.maxPointsData.length,
+        min = i - twitterNum,
+        temp,
+        index;
       while (i-- > min) {
         index = Math.floor((i + 1) * Math.random());
         temp = shuffled[index];
@@ -63,51 +70,91 @@ export default {
         shuffled[i] = temp;
       }
       this.pointsData = shuffled.slice(min);
+      this.pointsData.sort(function(a, b){
+        return a[0] - b[0];
+      })
+      this.pointsData.sort(function(a, b){
+        return a[1] - b[1];
+      })
 
-      // 设置地图
-      this.options = {
-        tooltip: {
-          trigger: "item",
-          formatter: "{b}",
-        },
-        geo: {
-          map: "New York"
-        },
-        series: [
-          {
-            name: 'twitter',
-            type: 'scatter',
-            coordinateSystem: 'geo',
-            data: this.convertData(this.pointsData),
-            symbolSize: function (val) {
-                return val[2] / 5;
-            },
-            encode: {
-                value: 2
-            },
-            itemStyle: {
-                color: 'purple'
-            },
-            label: {
+      if (!firstInit) {
+        // 设置地图
+        this.options = {
+          series: [
+            {
+              name: "twitter",
+              type: "scatter",
+              coordinateSystem: "geo",
+              data: this.pointsData,
+              symbolSize: 5,
+              encode: {
+                value: 2,
+              },
+              itemStyle: {
+                color: "blue",
+              },
+              label: {
                 normal: {
-                    show: false
+                  show: false,
                 },
                 emphasis: {
-                    show: false
-                }
+                  show: false,
+                },
+              },
             },
+          ],
+        };
+      } else {
+        this.options = {
+          tooltip: {
+            trigger: "item",
+            formatter: "{b}",
           },
-        ],
-      };
+          geo: {
+            map: "New York",
+          },
+          series: [
+            {
+              name: "twitter",
+              type: "scatter",
+              coordinateSystem: "geo",
+              data: this.pointsData,
+              symbolSize: 5,
+              encode: {
+                value: 2,
+              },
+              itemStyle: {
+                color: "blue",
+              },
+              label: {
+                normal: {
+                  show: false,
+                },
+                emphasis: {
+                  show: false,
+                },
+              },
+            },
+          ],
+        };
+      }
     },
     initMap() {
-      // 设置地图上的随机点
-      for(let i = 0; i < this.boroughsData.length; i++){
-        this.generateRandomPoint(this.boroughsData[i].name, 50);
-      } 
-
-      this.setWeekData(1);
       echarts.registerMap("New York", mapJson, {});
+
+      // 设置地图上的随机点
+      for (let i = 0; i < this.boroughsData.length; i++) {
+        this.generateRandomPoint(this.boroughsData[i].name, this.maxPointsNum / 5);
+      }
+
+      // 获得所有周中推文最大数
+      for (let i = 0; i < dataJson.data.length; i++){
+        if(this.maxTwitterNum < dataJson.data[i].twitter.total){
+          this.maxTwitterNum = dataJson.data[i].twitter.total;
+        }
+      }
+
+      this.setWeekData(1, true);
     },
 
     // 检查指定点是否在多边形内部
@@ -123,6 +170,7 @@ export default {
       return flag;
     },
 
+    // 生成随机点
     generateRandomPoint(boroughName, pointNum) {
       let polygonArr = Array(); //不规则区域数组
       let maxX = -Infinity,
@@ -136,7 +184,6 @@ export default {
       for (let key in featuresArr) {
         let model = featuresArr[key];
         if (model.properties.name.indexOf(boroughName) > -1) {
-          //相同的区域   如果区域相同时生成全部的
           let arr = model.geometry.coordinates; //经纬度的数组
           for (let key2 in arr) {
             let arr2 = arr[key2];
@@ -144,7 +191,7 @@ export default {
               let arr3 = arr2[key3];
               for (let key4 in arr3) {
                 let arr4 = arr3[key4];
-                //生成 不规则点数组
+                //生成不规则点数组
                 let pt = { x: arr4[0], y: arr4[1] };
                 polygonArr.push(pt);
                 areaArr.push(arr3[key4]);
@@ -183,18 +230,6 @@ export default {
           }
         }
       }
-    },
-
-    // 将原始数据(纯坐标)转换为
-    convertData(originData) {
-      var res = [];
-      for (var i = 0; i < originData.length; i++) {
-        res.push({
-          name: "Queens",
-          value: originData[i].concat(10),
-        });
-      }
-      return res;
     },
   },
 };
