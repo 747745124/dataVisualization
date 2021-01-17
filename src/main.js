@@ -12,6 +12,11 @@ import 'vue-awesome/icons/chart-area.js';
 import 'vue-awesome/icons/chart-pie.js';
 import 'vue-awesome/icons/chart-line.js';
 import 'vue-awesome/icons/align-left.js';
+import 'vue-awesome/icons/caret-left.js';
+import 'vue-awesome/icons/caret-right.js';
+import 'vue-awesome/icons/arrow-up.js';
+import 'vue-awesome/icons/arrow-down.js';
+import 'vue-awesome/icons/arrow-right.js';
 
 // 全局注册图标
 Vue.component('icon', Icon);
