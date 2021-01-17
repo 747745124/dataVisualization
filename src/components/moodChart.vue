@@ -49,7 +49,7 @@ export default {
       this.options = {
         tooltip: {
           trigger: "item",
-          formatter: "{a} <br/>{b} : {c} ({d}%)",
+          formatter: "{b} : {c} ({d}%)",
         },
         series: [
           {
@@ -58,8 +58,8 @@ export default {
             radius: "55%",
             center: ["50%", "50%"],
             data: [
-              { value: 335, name: "积极" },
-              { value: 310, name: "消极" },
+              { value: positive, name: "积极" },
+              { value: negative, name: "消极" },
             ],
             roseType: "radius",
             label: {
@@ -74,21 +74,27 @@ export default {
               length2: 20,
             },
             itemStyle: {
-              color: "#c23531",
-              shadowBlur: 200,
-              shadowColor: "rgba(0, 0, 0, 0.5)",
+                color: function(param){
+                  if(param.name == "积极")
+                    return "#1DA1F2";
+                  if(param.name == "消极")
+                    return "#EF1622";
+                }
+                
             },
 
             animationType: "scale",
             animationEasing: "elasticOut",
-            animationDelay: function (idx) {
+            animationDelay: function () {
               return Math.random() * 200;
             },
           },
         ],
       };
     },
-    initChart() {},
+    initChart() {
+      this.setWeekData(1);
+    },
   },
 };
 </script>

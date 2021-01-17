@@ -30,7 +30,7 @@
           <!-- 左侧 -->
           <div class="left-box">
             <div class="mb-2">
-              <dv-border-box-7 class="border-shadow"> 
+              <dv-border-box-7 class="border-shadow">
                 <leftUp :week="curWeek"></leftUp>
               </dv-border-box-7>
             </div>
@@ -65,6 +65,7 @@
           <div class="right-box ml-3">
             <div class="mb-2">
               <dv-border-box-7 class="border-shadow">
+                <moodChart :week="curWeek"></moodChart>
               </dv-border-box-7>
             </div>
             <div class="mb-2">
@@ -93,9 +94,10 @@ import { formatTime } from "../utils/index.js";
 // import bottomLeft from "./bottomLeft";
 // import bottomRight from "./bottomRight";
 import leftDown from "@/components/leftDown";
-import mapChart from "@/components/mapChart";
 import leftUp from "@/components/leftUp";
+import mapChart from "@/components/mapChart";
 import rightDown from "@/components/rightDown";
+import moodChart from "@/components/moodChart"
 export default {
   data() {
     return {
@@ -121,9 +123,10 @@ export default {
     // bottomLeft,
     // bottomRight
     leftDown,
+    leftUp,
     rightDown,
     mapChart,
-    leftUp,
+    moodChart,
   },
   mounted() {
     this.timeFn();
