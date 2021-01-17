@@ -68,21 +68,31 @@ export default {
 </script>
 
 <style lang="scss">
-#centreRight1 {
-  padding: 0.2rem;
-  height: 5.125rem;
-  min-width: 3.75rem;
-  border-radius: 0.0625rem;
-  .bg-color-black {
-    height: 4.3125rem;
-    border-radius: 0.125rem;
-  }
-  .text {
-    color: #c3cbde;
-  }
-  .body-box {
-    border-radius: 0.125rem;
-    overflow: hidden;
-  }
-}
+// #leftUp {
+//   padding-top: 0.3rem;
+//   .before-time-string {
+//     color: #b4b4b4;
+//     font-size: 20px;
+//     margin-left: 20px;
+//     margin-top: 24px;
+//     float: left;
+//   }
+//   #tilde {
+//     font-size: 32px !important;
+//     margin-left: 3px !important;
+//     margin-right: 3px !important;
+//   }
+//   .after-time-string {
+//     color: #b4b4b4;
+//     font-size: 20px;
+//     margin-right: 20px;
+//     margin-top: 24px;
+//     float: right;
+//   }
+//   .week-string {
+//     color: #ffffff;
+//     font-size: 24px;
+//     margin-top: 8px;
+//   }
+// }
 </style>

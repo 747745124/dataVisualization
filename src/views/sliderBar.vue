@@ -3,7 +3,14 @@
     <div class="slider" ref="slider">
       <div class="process" :style="{ width }"></div>
       <div class="thunk" ref="trunk" :style="{ left }">
-        <div class="block"></div>
+        <div class="block">
+          <span>
+            <icon name="caret-left"></icon>
+          </span>
+          <span style="margin-left:44px;">
+            <icon name="caret-right"></icon>
+          </span>
+        </div>
         <div class="tips">
           <span>{{ curVal }}</span>
           <i class="fas fa-caret-down"></i>
@@ -122,10 +129,12 @@ export default {
   height: 20px;
 }
 .slider .block {
-  width: 20px;
+  width: 60px;
   height: 20px;
-  border-radius: 50%;
+  margin-left: -20px;
+  border-radius: 10px;
   border: 2px solid #409eff;
+  color: #409eff;
   background: rgba(255, 255, 255, 1);
   -webkit-transition: 0.2s all;
   transition: 0.2s all;

@@ -31,7 +31,7 @@ export default {
         "Brooklyn",
         "Staten Island",
       ],
-      twitterPerPoint: 300, // 每个点对应的推文数量
+      twitterPerPoint: 100, // 每个点对应的推文数量
       maxTwitterNum: 0, // 每周最大推文数
       maxPointsData: [], // 最大可显示点集合
       maxPointsNum: 0, // 总共最多点数量
@@ -82,6 +82,8 @@ export default {
 
       let visualMapSet = this.getVisualMap("infected");
       let valueSeries = this.getValueSeries("infected", week);
+      // 获取心情百分比，越接近1越消极
+      let moodPercent = (dataJson.data[weekNum].twitter.moodIndex - this.minMoodIndex) / (this.maxMoodIndex - this.minMoodIndex);
 
       const seriesSet = [
         {
@@ -94,7 +96,12 @@ export default {
           data: this.pointsData,
           symbolSize: 15,
           colorAlpha: 1,
-          symbol: Icons.negativeIcon,
+          symbol: function(){
+            if(Math.random() > moodPercent)
+              return Icons.positiveIcon;
+            else
+              return Icons.negativeIcon;
+          },
         },
         valueSeries,
       ];
@@ -105,7 +112,7 @@ export default {
         tooltip: {},
         geo: {
           map: "New York",
-          zoom: 1.2, // 初始缩放大小
+          zoom: 1.1, // 初始缩放大小
           scaleLimit: {
             // 最大允许缩放
             min: 0.5,
@@ -239,13 +246,13 @@ export default {
       if (order == "infected") {
         return {
           min: 0,
-          max: 500,
+          max: 700000,
           left: "left",
           top: "bottom",
           text: ["High", "Low"],
           seriesIndex: [1],
           inRange: {
-            color: ["#e0ffff", "#006edd"],
+            color: ["#ccccff", "#eeeeff"],
           },
           calculable: true,
         };
