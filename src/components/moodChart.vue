@@ -71,7 +71,9 @@ export default {
             ],
             roseType: "radius",
             label: {
-              color: "rgba(255, 255, 255, 0.3)",
+              color: "rgba(255, 255, 255, 1)",
+              fontSize: "16",
+              formatter: "{b}:{c}",
             },
             labelLine: {
               lineStyle: {
@@ -87,7 +89,6 @@ export default {
                 if (param.name == "消极") return "#EF1622";
               },
             },
-
             animationType: "scale",
             animationEasing: "elasticOut",
             animationDelay: function () {
