@@ -1,7 +1,7 @@
 <template>
   <div id="center">
     <div class="up">
-      <div class="bg-color-black item">
+      <div class="item">
         <p class="ml-3 colorBlue fw-b">本周Twitter</p>
         <div>
           <dv-digital-flop
@@ -10,7 +10,7 @@
           />
         </div>
       </div>
-      <div class="bg-color-black item">
+      <div class="item">
         <p class="ml-3 colorBlue fw-b">本周心情指数</p>
         <div>
           <dv-digital-flop
@@ -19,7 +19,7 @@
           />
         </div>
       </div>
-      <div class="twitter-text fw-b">
+      <div class="twitter-text">
         {{ twitterText }}
       </div>
     </div>
