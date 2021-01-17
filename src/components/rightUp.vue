@@ -5,10 +5,6 @@
     </div>
     <div class="before-time-string d-flex jc-center">
       {{ beforeTimeString }}
-      <!-- + "  ~  " -->
-    </div>
-    <div id="tilde" class="before-time-string d-flex jc-center">
-      {{ " ~ " }}
     </div>
     <div class="after-time-string d-flex jc-center">
       {{ afterTimeString }}
@@ -196,11 +192,6 @@ export default {
     margin-left: 20px;
     margin-top: 24px;
     float: left;
-  }
-  #tilde {
-    font-size: 32px !important;
-    margin-left: 3px !important;
-    margin-right: 3px !important;
   }
   .after-time-string {
     color: #b4b4b4;
