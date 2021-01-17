@@ -24,12 +24,16 @@ export default {
     return {
       config: {
         // "讨论人数"
-        header: ["话题", "讨论频次"],
+        header: ["话题", "频次"],
         topic1: "",
         topic2: "",
         topic3: "",
-        data: [],
-        rowNum: 3, //表格行数
+        data: [
+          ["#2020", "<span  class='colorGrass'>↑75%</span>"],
+          ["#Trump", "<span  class='colorRed'>↓33%</span>"],
+          ["#BLM", "<span  class='colorGrass'>↑66%</span>"],
+        ],
+        rowNum: 2, //表格行数
         headerHeight: 35,
         headerBGC: "#0f1325", //表头
         oddRowBGC: "#0f1325", //奇数行
