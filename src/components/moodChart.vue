@@ -12,7 +12,7 @@
       <Echart
         :options="options"
         id="rightUp"
-        height="6rem"
+        height="2.5rem"
         width="100%"
       ></Echart>
     </div>
@@ -63,7 +63,7 @@ export default {
           {
             name: "推文态度",
             type: "pie",
-            radius: "55%",
+            radius: "80%",
             center: ["50%", "50%"],
             data: [
               { value: positive, name: "积极" },
@@ -72,8 +72,8 @@ export default {
             roseType: "radius",
             label: {
               color: "rgba(255, 255, 255, 1)",
-              fontSize: "16",
-              formatter: "{b}:{c}",
+              fontSize: "12",
+              formatter: "{b}\n{c} ({d}%)",
             },
             labelLine: {
               lineStyle: {
@@ -104,9 +104,3 @@ export default {
   },
 };
 </script>
-<style >
-#rightUp canvas {
-  transform: translate(80px, -90px);
-  zoom: 70%;
-}
-</style>
