@@ -1,5 +1,13 @@
 <template>
   <div id="center">
+    <div class="d-flex pt-2 pl-2">
+      <span style="color: rgba(0, 183, 255, 0.55)">
+        <icon name="chart-line"></icon>
+      </span>
+      <div class="d-flex">
+        <span class="fs-xl text mx-2">本周最热门Twitter</span>
+      </div>
+    </div>
     <div class="up">
       <div class="bg-color-black item">
         <p class="ml-3 colorBlue fw-b">本周Twitter</p>
