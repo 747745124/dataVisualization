@@ -4,7 +4,11 @@
       {{ weekString }}
     </div>
     <div class="before-time-string d-flex jc-center">
-      {{ beforeTimeString + "  ~  " }}
+      {{ beforeTimeString }}
+      <!-- + "  ~  " -->
+    </div>
+    <div id="tilde" class="before-time-string d-flex jc-center">
+      {{ " ~ " }}
     </div>
     <div class="after-time-string d-flex jc-center">
       {{ afterTimeString }}
@@ -161,19 +165,21 @@ export default {
       //变化箭头
       if (week > 1) {
         if (this.infectedNum > Data.data[week - 2].virusdata[5].infected) {
-            this.infectedChange = 1;
-        }else if (this.infectedNum < Data.data[week - 2].virusdata[5].infected) {
-            this.infectedChange = -1;
+          this.infectedChange = 1;
+        } else if (
+          this.infectedNum < Data.data[week - 2].virusdata[5].infected
+        ) {
+          this.infectedChange = -1;
         }
         if (this.deathNum > Data.data[week - 2].virusdata[5].death) {
-            this.deathChange = 1;
-        }else if (this.deathNum < Data.data[week - 2].virusdata[5].death) {
-            this.deathChange = -1;
+          this.deathChange = 1;
+        } else if (this.deathNum < Data.data[week - 2].virusdata[5].death) {
+          this.deathChange = -1;
         }
         if (this.curedNum > Data.data[week - 2].virusdata[5].cured) {
-            this.curedChange = 1;
-        }else if (this.infectedNum < Data.data[week - 2].virusdata[5].cured) {
-            this.curedChange = -1;
+          this.curedChange = 1;
+        } else if (this.infectedNum < Data.data[week - 2].virusdata[5].cured) {
+          this.curedChange = -1;
         }
       }
     },
@@ -190,6 +196,11 @@ export default {
     margin-left: 20px;
     margin-top: 24px;
     float: left;
+  }
+  #tilde {
+    font-size: 32px !important;
+    margin-left: 3px !important;
+    margin-right: 3px !important;
   }
   .after-time-string {
     color: #b4b4b4;
