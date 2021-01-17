@@ -51,48 +51,21 @@ export default {
         this.setWeekData(newWeek);
       },
     },
-    order:{
+    order: {
       handler() {
         // 当周数发生变动时，重设数据
         this.setWeekData(this.week);
       },
-    }
+    },
   },
   components: {
     Echart,
   },
   methods: {
     setWeekData(week) {
-      let weekNum = week - 1;
-      let pointNum =
-        dataJson.data[weekNum].twitter.total / this.twitterPerPoint;
-
-      // 随机从maxPointData中挑选出几个点
-      let shuffled = this.maxPointsData.slice(0),
-        i = this.maxPointsData.length,
-        min = i - pointNum,
-        temp,
-        index;
-      while (i-- > min) {
-        index = Math.floor((i + 1) * Math.random());
-        temp = shuffled[index];
-        shuffled[index] = shuffled[i];
-        shuffled[i] = temp;
-      }
-      this.pointsData = shuffled.slice(min);
-      this.pointsData.sort(function (a, b) {
-        return a[0] - b[0];
-      });
-      this.pointsData.sort(function (a, b) {
-        return a[1] - b[1];
-      });
-
+      let weekIndex = week - 1;
       let visualMapSet = this.getVisualMap(this.order);
       let valueSeries = this.getValueSeries(this.order, week);
-      // 获取心情百分比，越接近1越消极
-      let moodPercent =
-        (dataJson.data[weekNum].twitter.moodIndex - this.minMoodIndex) /
-        (this.maxMoodIndex - this.minMoodIndex);
 
       const seriesSet = [
         {
@@ -102,12 +75,12 @@ export default {
             tooltip: [0, 1],
           },
           coordinateSystem: "geo",
-          data: this.pointsData,
+          data: this.pointsData[weekIndex],
           symbolSize: 15,
           colorAlpha: 1,
-          symbol: function () {
-            if (Math.random() > moodPercent) return Icons.positiveIcon;
-            else return Icons.negativeIcon;
+          symbol: function (param) {
+            if (param[2] == 1) return Icons.positiveIcon;
+            else if (param[2] == 0) return Icons.negativeIcon;
           },
         },
         valueSeries,
@@ -171,7 +144,38 @@ export default {
         this.generateRandomPoint(this.boroughsName[i], this.maxPointsNum / 5);
       }
 
+      this.initPointsSet();
+
       this.setWeekData(1);
+    },
+
+    initPointsSet() {
+      // 获取随机打乱的最大点集数组
+      let shuffled = this.maxPointsData.sort(function () {
+        return 0.5 - Math.random();
+      });
+
+      for (let i = 0; i < dataJson.data.length; i++) {
+        // 获取心情百分比，越接近1越消极
+        let moodPercent =
+          (dataJson.data[i].twitter.moodIndex - this.minMoodIndex) /
+          (this.maxMoodIndex - this.minMoodIndex);
+        // 获取本周投点数量
+        let pointNum = dataJson.data[i].twitter.total / this.twitterPerPoint;
+        let curWeekPointsSet = shuffled.slice(0, pointNum - 1);
+        let weekSet = [];
+        for (let j = 0; j < curWeekPointsSet.length; j++) {
+          if (Math.random() > moodPercent) {
+            // 随机到积极
+            weekSet.push(curWeekPointsSet[j].concat([1]));
+          } else {
+            // 随机到消极
+            weekSet.push(curWeekPointsSet[j].concat([0]));
+          }
+        }
+
+        this.pointsData.push(weekSet);
+      }
     },
 
     // 检查指定点是否在多边形内部
@@ -331,7 +335,7 @@ export default {
           data: set,
         };
       } else if (order == "cured") {
-        let set = [];    
+        let set = [];
         for (let i = 0; i < this.boroughsName.length; i++) {
           set.push({
             name: this.boroughsName[i],
