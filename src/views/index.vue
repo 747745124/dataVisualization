@@ -98,7 +98,7 @@ import leftDown from "@/components/leftDown";
 import leftUp from "@/components/leftUp";
 import mapChart from "@/components/mapChart";
 import rightDown from "@/components/rightDown";
-import moodChart from "@/components/moodChart"
+import moodChart from "@/components/moodChart";
 import rightMiddle from "../components/rightMiddle.vue";
 export default {
   data() {

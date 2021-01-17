@@ -1,9 +1,17 @@
 <template>
   <div id="map">
     <div>
+      <div class="d-flex pt-2 pl-2">
+        <span style="color: rgba(0, 183, 255, 0.55)">
+          <icon name="chart-line"></icon>
+        </span>
+        <div class="d-flex">
+          <span class="fs-xl text mx-2">心情指数</span>
+        </div>
+      </div>
       <Echart
         :options="options"
-        id="centerUp"
+        id="rightUp"
         height="6rem"
         width="100%"
       ></Echart>
@@ -74,13 +82,10 @@ export default {
               length2: 20,
             },
             itemStyle: {
-                color: function(param){
-                  if(param.name == "积极")
-                    return "#1DA1F2";
-                  if(param.name == "消极")
-                    return "#EF1622";
-                }
-                
+              color: function (param) {
+                if (param.name == "积极") return "#1DA1F2";
+                if (param.name == "消极") return "#EF1622";
+              },
             },
 
             animationType: "scale",
@@ -98,3 +103,9 @@ export default {
   },
 };
 </script>
+<style >
+#rightUp canvas {
+  transform: translate(80px, -90px);
+  zoom: 70%;
+}
+</style>

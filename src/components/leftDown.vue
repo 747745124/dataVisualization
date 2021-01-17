@@ -123,7 +123,7 @@ export default {
               yAxisIndex: 0,
               itemStyle: {
                 normal: {
-                  color: "#F02FC2",
+                  color: "#920404",
                 },
               },
               data: newData.infected,

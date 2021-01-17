@@ -6,7 +6,7 @@
     <div class="time-string d-flex jc-center">
       {{ beforeTimeString + "   ~   " + afterTimeString }}
     </div>
-    <div class="infected-num d-flex">
+    <div class="infected-num d-flex jc-center">
       感染数：{{ infectedNum }} 新增：{{ infectedNumWeek }}
       <div>
         <div v-if="infectedChange == 1">
@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="death-num d-flex">
+    <div class="death-num d-flex jc-center">
       死亡数：{{ deathNum }} 新增：{{ deathNumWeek }}
       <div>
         <div v-if="deathChange == 1">
@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-    <div class="cured-num d-flex">
+    <div class="cured-num d-flex jc-center">
       治愈数：{{ curedNum }} 新增：{{ curedNumWeek }}
       <div>
         <div v-if="curedChange == 1">
@@ -236,7 +236,7 @@ export default {
     margin-top: 4px;
   }
   .infected-num {
-    color: #f02fc2;
+    color: #920404;
     font-size: 14px;
     font-weight: bold;
     margin-top: 14px;
