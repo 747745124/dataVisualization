@@ -4,7 +4,7 @@
       <Echart
         :options="options"
         id="centerUp"
-        height="7rem"
+        height="6rem"
         width="100%"
         :replace="false"
       ></Echart>

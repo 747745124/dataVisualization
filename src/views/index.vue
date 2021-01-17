@@ -31,7 +31,6 @@
           <div class="left-box">
             <div class="mb-2">
               <dv-border-box-7>
-                <centerLeft1 />
               </dv-border-box-7>
             </div>
             <div>
@@ -60,12 +59,14 @@
           <div class="right-box ml-3">
             <div class="mb-2">
               <dv-border-box-7>
-                <centerRight2 />
+              </dv-border-box-7>
+            </div>
+            <div class="mb-2">
+              <dv-border-box-7>
               </dv-border-box-7>
             </div>
             <div>
               <dv-border-box-7>
-                <centerRight1 />
               </dv-border-box-7>
             </div>
           </div>
@@ -79,9 +80,9 @@
 <script>
 import sliderBar from "./sliderBar";
 import { formatTime } from '../utils/index.js'
-import centerLeft1 from "./centerLeft1";
-import centerRight1 from "./centerRight1";
-import centerRight2 from "./centerRight2";
+// import centerLeft1 from "./centerLeft1";
+// import centerRight1 from "./centerRight1";
+// import centerRight2 from "./centerRight2";
 // import center from "./center";
 // import bottomLeft from "./bottomLeft";
 // import bottomRight from "./bottomRight";
@@ -104,9 +105,9 @@ export default {
   },
   components: {
     sliderBar,
-    centerLeft1,
-    centerRight1,
-    centerRight2,
+    // centerLeft1,
+    // centerRight1,
+    // centerRight2,
     // center,
     // bottomLeft,
     // bottomRight

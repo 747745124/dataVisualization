@@ -1,11 +1,13 @@
 <template>
-  <div class="slider" ref="slider">
-    <div class="process" :style="{ width }"></div>
-    <div class="thunk" ref="trunk" :style="{ left }">
-      <div class="block"></div>
-      <div class="tips">
-        <span>{{ curVal }}</span>
-        <i class="fas fa-caret-down"></i>
+  <div class="slider-box">
+    <div class="slider" ref="slider">
+      <div class="process" :style="{ width }"></div>
+      <div class="thunk" ref="trunk" :style="{ left }">
+        <div class="block"></div>
+        <div class="tips">
+          <span>{{ curVal }}</span>
+          <i class="fas fa-caret-down"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -95,8 +97,9 @@ export default {
 }
 .slider {
   position: relative;
-  margin: 20px 0;
-  width: 400px;
+  margin-top: 10%;
+  margin-left: 15%;
+  width: 70%;
   height: 10px;
   background: #e4e7ed;
   border-radius: 5px;
