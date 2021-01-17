@@ -1,11 +1,15 @@
 <template>
   <div id="leftDown">
-    <div class="d-flex pt-2 pl-2"></div>
+    <div class="d-flex pt-1 pl-1">
+      <span style="color:rgb(56, 0, 255)">
+        <icon name="chart-line"></icon>
+      </span>
+    </div>
     <div>
       <Echart
         :options="options"
         id="leftDownChart"
-        height="6rem"
+        height="5.8rem"
         width="90%"
       ></Echart>
     </div>
@@ -48,7 +52,7 @@ export default {
           },
           tooltip: {
             trigger: "axis",
-            backgroundColor: "rgba(255,255,255,0.1)",
+            backgroundColor: "rgba(30,30,30,0.4)",
             axisPointer: {
               type: "shadow",
               label: {
@@ -62,11 +66,12 @@ export default {
             textStyle: {
               color: "#B4B4B4",
             },
+            left: "20%",
             top: "0%",
           },
           grid: {
             x: "15%",
-            width: "70%",
+            width: "80%",
             y: "10%",
           },
           xAxis: {
@@ -88,7 +93,6 @@ export default {
                   color: "#B4B4B4",
                 },
               },
-
               axisLabel: {
                 formatter: "{value} ",
               },
