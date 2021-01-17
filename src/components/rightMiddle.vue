@@ -2,7 +2,7 @@
   <div id="center">
     <div class="d-flex pt-2 pl-2">
       <span style="color: rgba(0, 183, 255, 0.55)">
-        <icon name="chart-line"></icon>
+        <icon name="laptop"></icon>
       </span>
       <div class="d-flex">
         <span class="fs-xl text mx-2">本周最热门Twitter</span>
@@ -87,7 +87,6 @@ export default {
     .item {
       border-radius: 0.0625rem;
       padding-top: 0.2rem;
-      margin-top: 0.1rem;
       width: 32%;
       height: 0.875rem;
     }

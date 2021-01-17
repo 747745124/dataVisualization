@@ -19,6 +19,8 @@ import 'vue-awesome/icons/arrow-down.js';
 import 'vue-awesome/icons/arrow-right.js';
 import 'vue-awesome/icons/sort.js';
 import 'vue-awesome/icons/map.js';
+import 'vue-awesome/icons/laptop.js';
+import 'vue-awesome/icons/sort-amount-down.js';
 
 // 全局注册图标
 Vue.component('icon', Icon);

@@ -2,7 +2,7 @@
   <div id="centreRight1">
     <div class="d-flex pt-2 pl-2">
       <span style="color: rgba(0, 183, 255, 0.55)">
-        <icon name="chart-line"></icon>
+        <icon name="sort-amount-down"></icon>
       </span>
       <div class="d-flex">
         <span class="fs-xl text mx-2">话题热度排行榜</span>
