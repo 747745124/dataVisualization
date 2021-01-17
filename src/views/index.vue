@@ -70,6 +70,7 @@
             </div>
             <div class="mb-2">
               <dv-border-box-7 class="border-shadow">
+                <rightMiddle :week="curWeek"></rightMiddle>
               </dv-border-box-7>
             </div>
             <div>
@@ -98,6 +99,7 @@ import leftUp from "@/components/leftUp";
 import mapChart from "@/components/mapChart";
 import rightDown from "@/components/rightDown";
 import moodChart from "@/components/moodChart"
+import rightMiddle from "../components/rightMiddle.vue";
 export default {
   data() {
     return {
@@ -122,6 +124,7 @@ export default {
     // center,
     // bottomLeft,
     // bottomRight
+    rightMiddle,
     leftDown,
     leftUp,
     rightDown,

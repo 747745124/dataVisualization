@@ -24,9 +24,16 @@ export default {
     return {
       config: {
         // "讨论人数"
-        header: ["话题", "讨论频次"],
-        data: [],
-        rowNum: 3, //表格行数
+        header: ["话题", "频次"],
+        topic1: "",
+        topic2: "",
+        topic3: "",
+        data: [
+          ["#2020", "<span  class='colorGrass'>↑75%</span>"],
+          ["#Trump", "<span  class='colorRed'>↓33%</span>"],
+          ["#BLM", "<span  class='colorGrass'>↑66%</span>"],
+        ],
+        rowNum: 2, //表格行数
         headerHeight: 35,
         headerBGC: "#0f1325", //表头
         oddRowBGC: "#0f1325", //奇数行
@@ -53,9 +60,18 @@ export default {
   methods: {
     setWeek(week) {
       this.data = [
-        [Data.data[week - 1].twitter.topic[0], "<span  class='colorGrass'>↑75%</span>"],
-        [Data.data[week - 1].twitter.topic[1], "<span  class='colorRed'>↓33%</span>"],
-        [Data.data[week - 1].twitter.topic[2], "<span  class='colorGrass'>↑100%</span>"]
+        [
+          Data.data[week - 1].twitter.topic[0],
+          "<span  class='colorGrass'>↑75%</span>",
+        ],
+        [
+          Data.data[week - 1].twitter.topic[1],
+          "<span  class='colorRed'>↓33%</span>",
+        ],
+        [
+          Data.data[week - 1].twitter.topic[2],
+          "<span  class='colorGrass'>↑100%</span>",
+        ],
       ];
     },
   },
