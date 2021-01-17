@@ -56,6 +56,7 @@
                   :max="21"
                   v-model="startWeek"
                   @onSlide="updateWeek"
+                  @onChangeOrder="updateOrder"
                 ></slider-bar>
               </dv-border-box-7>
             </div>
@@ -113,7 +114,7 @@ export default {
       groupMember: "李绍康 朱晴川 席昊",
       startWeek: 1,
       curWeek: 1, // 当前周
-      order: "0", // 当前选择显示的部分，0：感染数，1：死亡数，2：治愈数
+      order: "infected", // 当前选择显示的部分
     };
   },
   components: {
@@ -152,8 +153,9 @@ export default {
       //滑块改变时间时调用
       this.curWeek = week;
     },
-    updateOptions() {
-      console.log(this.order);
+    updateOrder(_order) {
+      //改变order？
+      this.order = _order;
     },
   },
 };

@@ -6,68 +6,71 @@
     <div class="time-string d-flex jc-center">
       {{ beforeTimeString + "   ~   " + afterTimeString }}
     </div>
-    <div class="infected-num d-flex jc-center">
-      感染数：{{ infectedNum }} 新增：{{ infectedNumWeek }}
+    <div class="infected-num d-flex">
+      感染数：{{ infectedNum }} ( 新增：{{ infectedNumWeek }}
       <div>
         <div v-if="infectedChange == 1">
           <!-- 根据新增感染数是否增加判断箭头方向 -->
-          <span class="ml-3" style="color: #ff0000aa">
+          <span class="mx-2" style="color: #ff0000aa">
             <icon name="arrow-up"></icon>
           </span>
         </div>
         <div v-else-if="infectedChange == 0">
-          <span class="ml-3">
+          <span class="mx-2">
             <icon name="arrow-right" style="color: #00ff0099"></icon>
           </span>
         </div>
         <div v-else-if="infectedChange == -1">
-          <span class="ml-3">
+          <span class="mx-2">
             <icon name="arrow-down" style="color: #0000ee"></icon>
           </span>
         </div>
       </div>
+       )
     </div>
-    <div class="death-num d-flex jc-center">
-      死亡数：{{ deathNum }} 新增：{{ deathNumWeek }}
+    <div class="death-num d-flex">
+      死亡数：{{ deathNum }} ( 新增：{{ deathNumWeek }}
       <div>
         <div v-if="deathChange == 1">
           <!-- 根据新增死亡数是否增加判断箭头方向 -->
-          <span class="ml-3" style="color: #ff0000aa">
+          <span class="mx-2" style="color: #ff0000aa">
             <icon name="arrow-up"></icon>
           </span>
         </div>
         <div v-else-if="deathChange == 0">
-          <span class="ml-3">
+          <span class="mx-2">
             <icon name="arrow-right" style="color: #00ff0099"></icon>
           </span>
         </div>
         <div v-else-if="deathChange == -1">
-          <span class="ml-3">
+          <span class="mx-2">
             <icon name="arrow-down" style="color: #0000ee"></icon>
           </span>
         </div>
       </div>
+       )
     </div>
-    <div class="cured-num d-flex jc-center">
-      治愈数：{{ curedNum }} 新增：{{ curedNumWeek }}
+    <div class="cured-num d-flex">
+      治愈数：{{ curedNum }} ( 新增：{{ curedNumWeek }}
       <div>
         <div v-if="curedChange == 1">
           <!-- 根据新增治愈数是否增加判断箭头方向 -->
-          <span class="ml-3" style="color: #0000ee">
+          <span class="mx-2" style="color: #0000ee">
             <icon name="arrow-up"></icon>
           </span>
         </div>
         <div v-else-if="curedChange == 0">
-          <span class="ml-3">
+          <span class="mx-2">
             <icon name="arrow-right" style="color: #00ff0099"></icon>
           </span>
         </div>
         <div v-else-if="curedChange == -1">
-          <span class="ml-3">
+          <span class="mx-2">
             <icon name="arrow-down" style="color: #ff0000aa"></icon>
           </span>
         </div>
       </div>
+       )
     </div>
   </div>
 </template>
