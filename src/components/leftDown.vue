@@ -24,7 +24,7 @@ export default {
     return {
       options: {},
       cdata: {
-        week: [],
+        city: [],
         infected: [],
         death: [],
         cured: [],
@@ -75,7 +75,7 @@ export default {
             y: "12%",
           },
           xAxis: {
-            data: newData.week,
+            data: newData.city,
             axisLine: {
               lineStyle: {
                 color: "#B4B4B4",
@@ -166,30 +166,21 @@ export default {
     this.setData(1);
   },
   methods: {
-    // 显示当周前后几周数据
+    // 显示当周数据
     setData(week) {
-      const deltaWeek = 3;
-      const maxWeek = 21;
       let newData = {
-        week: [],
+        city: [],
         infected: [],
         death: [],
         cured: [],
       };
-      let weekStart = 1;
-      let weekEnd = maxWeek;
-      if(week - deltaWeek > weekStart){
-        weekStart = week - deltaWeek;
-      }
-      if(week + deltaWeek < maxWeek){
-        weekEnd = week + deltaWeek;
-      }
-      for (let i = weekStart; i <= weekEnd; i++) {
-        let weekData = Data.data[i - 1].virusdata[5];
-        newData.week.push("第" + i + "周");
-        newData.infected.push(weekData.infected);
-        newData.death.push(weekData.death);
-        newData.cured.push(weekData.cured);
+      let weekNum = week - 1;
+      let weekData = Data.data[weekNum].virusdata;
+      for (let i = 0; i < weekData.length; i++) {
+        newData.city.push(weekData[i].name);
+        newData.infected.push(weekData[i].infected);
+        newData.death.push(weekData[i].death);
+        newData.cured.push(weekData[i].cured);
       }
       this.cdata = newData;
     },
