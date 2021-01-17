@@ -1,10 +1,18 @@
 <template>
   <div id="map">
+    <div style="position:absolute;" class="d-flex pt-2 pl-2">
+      <span style="color: rgba(0, 183, 255, 0.55)">
+        <icon name="map"></icon>
+      </span>
+      <div class="d-flex">
+        <span class="fs-xl text mx-2">纽约市疫情</span>
+      </div>
+    </div>
     <div>
       <Echart
         :options="options"
         id="centerUp"
-        height="6.8rem"
+        height="6.9rem"
         width="100%"
       ></Echart>
     </div>
@@ -51,12 +59,12 @@ export default {
         this.setWeekData(newWeek);
       },
     },
-    order:{
+    order: {
       handler() {
         // 当周数发生变动时，重设数据
         this.setWeekData(this.week);
       },
-    }
+    },
   },
   components: {
     Echart,
@@ -331,7 +339,7 @@ export default {
           data: set,
         };
       } else if (order == "cured") {
-        let set = [];    
+        let set = [];
         for (let i = 0; i < this.boroughsName.length; i++) {
           set.push({
             name: this.boroughsName[i],
