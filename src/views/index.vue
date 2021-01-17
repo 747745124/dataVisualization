@@ -68,6 +68,7 @@
             </div>
             <div class="mb-2">
               <dv-border-box-7 class="border-shadow">
+                <moodChart :week="curWeek"></moodChart>
               </dv-border-box-7>
             </div>
             <div>
@@ -93,6 +94,7 @@ import { formatTime } from "../utils/index.js";
 // import bottomRight from "./bottomRight";
 import leftDown from "@/components/leftDown";
 import mapChart from "@/components/mapChart";
+import moodChart from "@/components/moodChart";
 import rightUp from "@/components/rightUp";
 import rightDown from "@/components/rightDown";
 export default {
@@ -123,6 +125,7 @@ export default {
     rightDown,
     mapChart,
     rightUp,
+    moodChart
   },
   mounted() {
     this.timeFn();
