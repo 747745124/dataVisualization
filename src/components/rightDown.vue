@@ -1,42 +1,47 @@
 <template>
-  <div id="leftUp">
-    <div class="week-string d-flex jc-center">
-      {{ weekString }}
+  <div id="centreRight1">
+    <div class="d-flex pt-2 pl-2">
+      <span style="color: #5cd9e8">
+        <icon name="chart-line"></icon>
+      </span>
+      <div class="d-flex">
+        <span class="fs-xl text mx-2">话题热度排行榜</span>
+      </div>
     </div>
-    <div class="before-time-string d-flex jc-center">
-      {{ beforeTimeString }}
-      <!-- + "  ~  " -->
-    </div>
-    <div id="tilde" class="before-time-string d-flex jc-center">
-      {{ " ~ " }}
-    </div>
-    <div class="after-time-string d-flex jc-center">
-      {{ afterTimeString }}
+    <div class="d-flex jc-center body-box">
+      <dv-scroll-board
+        :config="config"
+        style="width: 5.375rem; height: 1.8rem"
+      />
     </div>
   </div>
 </template>
 
 <script>
-// import Data from "@/static/data.json";
+import Data from "@/static/data.json";
 export default {
   data() {
     return {
-      beforeYear: null,
-      beforeMonth: null,
-      beforeDay: null,
-      afterYear: null,
-      afterMonth: null,
-      afterDay: null,
-      beforeTimeString: null,
-      afterTimeString: null,
-      weekString: null,
-      monthDay: [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+      config: {
+        // "讨论人数"
+        header: ["话题", "讨论频次"],
+        topic1: "",
+        topic2: "",
+        topic3: "",
+        data: [],
+        rowNum: 3, //表格行数
+        headerHeight: 35,
+        headerBGC: "#0f1325", //表头
+        oddRowBGC: "#0f1325", //奇数行
+        evenRowBGC: "#171c33", //偶数行
+        index: true,
+        columnWidth: [50],
+        align: ["center"],
+      },
     };
   },
+  props: { week: Number },
   components: {},
-  props: {
-    week: Number,
-  },
   watch: {
     week: {
       handler(newWeek) {
@@ -49,72 +54,35 @@ export default {
     this.setWeek(1);
   },
   methods: {
-    // 初始化为第一周
     setWeek(week) {
-      //根据周数获得日期
-      this.beforeYear = "2020";
-      this.afterYear = "2020";
-
-      let startDay = week * 7 - 1 - 5;
-      for (let m = 1; m <= 12; m++) {
-        this.beforeDay = startDay;
-        startDay -= this.monthDay[m];
-        if (startDay < 0) {
-          this.beforeMonth = m;
-          break;
-        }
-      }
-      let endDay = week * 7 + 6 - 5;
-      for (let m = 1; m <= 12; m++) {
-        this.afterDay = endDay;
-        endDay -= this.monthDay[m];
-        if (endDay < 0) {
-          this.afterMonth = m;
-          break;
-        }
-      }
-      //字符串
-      this.beforeTimeString =
-        this.beforeYear +
-        "年" +
-        this.beforeMonth +
-        "月" +
-        this.beforeDay +
-        "日";
-      this.afterTimeString =
-        this.afterYear + "年" + this.afterMonth + "月" + this.afterDay + "日";
-      this.weekString = "第" + week + "周";
+      this.data[0][0] = Data.data[week - 1].twitter.topic[0];
+      this.data[1][0] = Data.data[week - 1].twitter.topic[1];
+      this.data[2][0] = Data.data[week - 1].twitter.topic[2];
+      let pair1 = [this.topic1, "<span  class='colorGrass'>↑75%</span>"];
+      let pair2 = [this.topic2, "<span  class='colorRed'>↓33%</span>"];
+      let pair3 = [this.topic3, "<span  class='colorGrass'>↑100%</span>"];
+      this.data.push(pair1, pair2, pair3);
     },
   },
 };
 </script>
 
 <style lang="scss">
-#leftUp {
-  padding-top: 0.3rem;
-  .before-time-string {
-    color: #b4b4b4;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-top: 24px;
-    float: left;
+#centreRight1 {
+  padding: 0.2rem;
+  height: 5.125rem;
+  min-width: 3.75rem;
+  border-radius: 0.0625rem;
+  .bg-color-black {
+    height: 4.3125rem;
+    border-radius: 0.125rem;
   }
-  #tilde {
-    font-size: 32px !important;
-    margin-left: 3px !important;
-    margin-right: 3px !important;
+  .text {
+    color: #c3cbde;
   }
-  .after-time-string {
-    color: #b4b4b4;
-    font-size: 20px;
-    margin-right: 20px;
-    margin-top: 24px;
-    float: right;
-  }
-  .week-string {
-    color: #ffffff;
-    font-size: 24px;
-    margin-top: 8px;
+  .body-box {
+    border-radius: 0.125rem;
+    overflow: hidden;
   }
 }
 </style>
