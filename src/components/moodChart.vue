@@ -3,7 +3,7 @@
     <div>
       <div class="d-flex pt-2 pl-2">
         <span style="color: rgba(0, 183, 255, 0.55)">
-          <icon name="chart-line"></icon>
+          <icon name="chart-pie"></icon>
         </span>
         <div class="d-flex">
           <span class="fs-xl text mx-2">心情指数</span>

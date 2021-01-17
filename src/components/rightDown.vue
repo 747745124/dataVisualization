@@ -1,7 +1,7 @@
 <template>
   <div id="centreRight1">
     <div class="d-flex pt-2 pl-2">
-      <span style="color: #5cd9e8">
+      <span style="color: rgba(0, 183, 255, 0.55)">
         <icon name="chart-line"></icon>
       </span>
       <div class="d-flex">
