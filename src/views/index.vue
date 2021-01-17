@@ -96,11 +96,12 @@ export default {
       dateYear: null,
       dateWeek: null,
       weekday: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
-      //字符串
+      // 字符串
       title: "当我们在做数据可视化的时候我们是在生产什么垃圾",
       groupMember: "李绍康 朱晴川 席昊",
       startWeek: 1,
-      curWeek: 1, //当前周
+      curWeek: 1, // 当前周
+      order: '0', // 当前选择显示的部分，0：感染数，1：死亡数，2：治愈数
     };
   },
   components: {
@@ -134,6 +135,10 @@ export default {
     updateWeek(week) {
       //滑块改变时间时调用
       this.curWeek = week;
+    },
+    updateOptions() {
+
+        console.log(this.order);
     }
   }
 };
