@@ -47,9 +47,18 @@ export default {
         topic2: "",
         topic3: "",
         data: [
-          [Data.data[week - 1].twitter.topic[0], "<span  class='colorGrass'>↑75%</span>"],
-          [Data.data[week - 1].twitter.topic[1], "<span  class='colorRed'>↓33%</span>"],
-          [Data.data[week - 1].twitter.topic[2], "<span  class='colorGrass'>↑66%</span>"],
+          [
+            Data.data[week - 1].twitter.topic[0],
+            "<span  style='color: #dc3530'>↑75%</span>",
+          ],
+          [
+            Data.data[week - 1].twitter.topic[1],
+            "<span  style='color: #4aa0eb'>↓33%</span>",
+          ],
+          [
+            Data.data[week - 1].twitter.topic[2],
+            "<span  style='color: #dc3530'>↑66%</span>",
+          ],
         ],
         rowNum: 2, //表格行数
         headerHeight: 35,
