@@ -80,21 +80,21 @@
             //左侧
             .left-box {
                 display: grid;
-                grid-template-rows: 4rem 7rem;
-                width: 25%;
+                grid-template-rows: 3rem 6rem;
+                width: 30%;
             }
             //中间
             .center-box {
                 // margin: 3rem;
                 display: grid;
-                grid-template-rows: 8rem 3rem;
-                width: 55%;
+                grid-template-rows: 6rem 3rem;
+                width: 45%;
             }
             //右侧
             .right-box {
                 display: grid;
-                grid-template-rows: 5rem 6rem;
-                width: 20%;
+                grid-template-rows: 3rem 3rem 3rem;
+                width: 25%;
             }
         }
     }

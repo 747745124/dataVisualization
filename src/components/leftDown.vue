@@ -6,7 +6,7 @@
         :options="options"
         id="leftDownChart"
         height="6rem"
-        width="80%"
+        width="90%"
       ></Echart>
     </div>
   </div>
@@ -65,9 +65,9 @@ export default {
             top: "0%",
           },
           grid: {
-            x: "12%",
-            width: "78%",
-            y: "5%",
+            x: "15%",
+            width: "70%",
+            y: "10%",
           },
           xAxis: {
             data: newData.city,
@@ -113,7 +113,7 @@ export default {
               showAllSymbol: true,
               symbol: "emptyCircle",
               symbolSize: 8,
-              yAxisIndex: 1,
+              yAxisIndex: 0,
               itemStyle: {
                 normal: {
                   color: "#F02FC2",
@@ -123,35 +123,32 @@ export default {
             },
             {
               name: "死亡数",
-              type: "bar",
-              barWidth: 10,
+              type: "line",
+              smooth: true,
+              showAllSymbol: true,
+              symbol: "emptyCircle",
+              symbolSize: 8,
+              yAxisIndex: 1,
               itemStyle: {
                 normal: {
-                  barBorderRadius: 5,
-                  color: new this.$echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                    { offset: 0, color: "#956FD4" },
-                    { offset: 1, color: "#3EACE5" },
-                  ]),
+                  color: "#956FD4",
                 },
               },
               data: newData.death,
             },
             {
               name: "治愈数",
-              type: "bar",
-              barGap: "-100%",
-              barWidth: 10,
+              type: "line",
+              smooth: true,
+              showAllSymbol: true,
+              symbol: "emptyCircle",
+              symbolSize: 8,
+              yAxisIndex: 0,
               itemStyle: {
                 normal: {
-                  barBorderRadius: 5,
-                  color: new this.$echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                    { offset: 0, color: "rgba(156,107,211,0.8)" },
-                    { offset: 0.2, color: "rgba(156,107,211,0.5)" },
-                    { offset: 1, color: "rgba(156,107,211,0.2)" },
-                  ]),
+                  color: "#3EACE5",
                 },
               },
-              z: -12,
               data: newData.cured,
             },
           ],
