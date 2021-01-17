@@ -71,7 +71,7 @@ export default {
           },
           grid: {
             x: "15%",
-            width: "75%",
+            width: "70%",
             y: "12%",
           },
           xAxis: {

@@ -7,7 +7,7 @@
           <span>
             <icon name="caret-left"></icon>
           </span>
-          <span style="margin-left:44px;">
+          <span style="margin-left: 44px">
             <icon name="caret-right"></icon>
           </span>
         </div>
@@ -17,6 +17,11 @@
         </div>
       </div>
     </div>
+    <button class="button" v-on:click="changeOrder">
+      <span>
+        <icon name="caret-right"></icon>
+      </span>
+    </button>
   </div>
 </template>
 <script>
@@ -32,6 +37,7 @@ export default {
       slider: null, //滚动条DOM元素
       thunk: null, //拖拽DOM元素
       cur: this.value, //当前值
+      order: "infected",
     };
   },
   //渲染到页面的时候
@@ -60,6 +66,20 @@ export default {
       };
       return false;
     };
+  },
+  methods: {
+    changeOrder: function () {
+      //改变order
+      if (this.order == "infected") {
+        this.order = "death";
+      } else if (this.order == "death") {
+        this.order = "cured";
+      } else if (this.order == "cured") {
+        this.order = "death";
+      }
+
+      this.$emit("onChangeOrder", this.order);
+    },
   },
   computed: {
     // 设置一个百分比，提供计算slider进度宽度和trunk的left值
@@ -104,7 +124,7 @@ export default {
 }
 .slider {
   position: relative;
-  margin-top: 12%;
+  margin-top: 5%;
   margin-left: 15%;
   width: 70%;
   height: 10px;
@@ -141,15 +161,15 @@ export default {
 }
 .slider .tips {
   position: absolute;
-  left: -1px;
-  bottom: -34px;
+  left: -3px;
+  bottom: -2px;
   min-width: 15px;
   text-align: center;
   padding: 4px 8px;
-  background: #000;
+  /* background: #000; */
   border-radius: 10px;
   height: 24px;
-  color: #fff;
+  color: #000000;
 }
 .slider .tips i {
   position: absolute;
@@ -163,5 +183,20 @@ export default {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   opacity: 0.6;
+}
+.button{
+  border: none;
+  background-color: #FFFFFF;
+  width: 30px;
+  height: 30px;
+  color: white;
+  margin-top: 10px;
+  margin-left: 50%;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.button:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 </style>
