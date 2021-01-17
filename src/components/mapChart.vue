@@ -134,7 +134,7 @@ export default {
           },
           emphasis: {
             itemStyle: {
-              areaColor: null,
+              areaColor: "#AABB11",
               shadowOffsetX: 0,
               shadowOffsetY: 0,
               shadowBlur: 20,

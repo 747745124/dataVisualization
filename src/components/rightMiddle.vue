@@ -1,19 +1,25 @@
 <template>
   <div id="center">
     <div class="up">
-      <div
-        class="bg-color-black item"
-        v-for="item in titleItem"
-        :key="item.title"
-      >
-        <p class="ml-3 colorBlue fw-b">{{ item.title }}</p>
+      <div class="bg-color-black item">
+        <p class="ml-3 colorBlue fw-b">本周Twitter</p>
         <div>
           <dv-digital-flop
-            :config="item.number"
+            :config="item1"
             style="width: 1.25rem; height: 0.625rem"
           />
         </div>
       </div>
+      <div class="bg-color-black item">
+        <p class="ml-3 colorBlue fw-b">本周心情指数</p>
+        <div>
+          <dv-digital-flop
+            :config="item2"
+            style="width: 1.25rem; height: 0.625rem"
+          />
+        </div>
+      </div>
+      <p class="ml-3 colorBlue fw-b">{{ twitterText }}</p>
     </div>
   </div>
 </template>
@@ -22,24 +28,9 @@ import Data from "@/static/data.json";
 export default {
   data() {
     return {
-      titleItem: [
-        {
-          title: "本周Twitter",
-          number: {
-            number: ["1.2k"],
-            toFixed: 1,
-            content: "{nt}",
-          },
-        },
-        {
-          title: "本周心情指数",
-          number: {
-            number: [18],
-            toFixed: 1,
-            content: "{nt}",
-          },
-        },
-      ],
+      item1: {},
+      item2: {},
+      twitterText: "twitterText",
     };
   },
   props: { week: Number },
@@ -57,9 +48,17 @@ export default {
   },
   methods: {
     setWeek(week) {
-      this.titleItem[0].number.number[0] = Data.data[week - 1].twitter.total;
-      this.titleItem[1].number.number[0] =
-        Data.data[week - 1].twitter.moodIndex;
+      this.item1 = {
+        number: [Data.data[week - 1].twitter.total.toString()],
+        toFixed: 1,
+        content: "{nt}",
+      };
+      this.item2 = {
+        number: [Data.data[week - 1].twitter.moodIndex.toString().substring(0, 4)],
+        toFixed: 1,
+        content: "{nt}",
+      };
+      this.twitterText = Data.data[week - 1].twitter.topTwitter;
     },
   },
 };

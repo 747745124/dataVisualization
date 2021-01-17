@@ -1,6 +1,6 @@
 <template>
   <div id="leftDown">
-    <div class="d-flex pt-1 pl-3">
+    <div class="d-flex pt-1 pl-2">
       <span style="color: rgba(0, 183, 255, 0.55)">
         <icon name="chart-line"></icon>
       </span>
