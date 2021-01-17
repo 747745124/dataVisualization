@@ -4,7 +4,7 @@
       <Echart
         :options="options"
         id="centerUp"
-        height="6rem"
+        height="6.8rem"
         width="100%"
       ></Echart>
     </div>
