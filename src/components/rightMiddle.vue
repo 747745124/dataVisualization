@@ -19,7 +19,9 @@
           />
         </div>
       </div>
-      <p class="ml-3 colorBlue fw-b">{{ twitterText }}</p>
+      <div class="twitter-text fw-b">
+        {{ twitterText }}
+      </div>
     </div>
   </div>
 </template>
@@ -54,7 +56,9 @@ export default {
         content: "{nt}",
       };
       this.item2 = {
-        number: [Data.data[week - 1].twitter.moodIndex.toString().substring(0, 4)],
+        number: [
+          Data.data[week - 1].twitter.moodIndex.toString().substring(0, 4),
+        ],
         toFixed: 1,
         content: "{nt}",
       };
@@ -79,6 +83,13 @@ export default {
       width: 32%;
       height: 0.875rem;
     }
+  }
+  .twitter-text {
+    color: #e4e7ed;
+    height: 1.5rem;
+    width: 5rem;
+    margin-top: 0.2rem;
+    overflow: hidden;
   }
 }
 </style>
