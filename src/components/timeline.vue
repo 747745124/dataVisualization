@@ -1,6 +1,6 @@
 <template>
   <div class="Echarts">
-    <div id="timeline" style="width: 500px; height: 50px"></div>
+    <div id="timeline" style="width: 100%; height: 100%"></div>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
 
     let weeks = [];
     for (let i = this.min; i <= this.max; i++) {
-      weeks.push({ value: i, tooltip:{ formatter: "{b}" }});
+      weeks.push({ value: i, tooltip: { formatter: "{b}" } });
     }
 
     console.log(weeks);
@@ -40,12 +40,18 @@ export default {
             formatter: function (s) {
               return s;
             },
-            color: "white",
+            color: "#B4B4B4",
           },
           tooltip: {},
           controlStyle: {
-              color:"white",
-          }
+            color: "#B4B4B4",
+          },
+          lineStyle: {
+          },
+          loop: true,
+          left: "5%",
+          right: "5%",
+          top: "30%",
         },
       },
       options: [[1], [2], [3]],
@@ -55,4 +61,8 @@ export default {
 </script>
 
 <style>
+.Echarts {
+  height: 100%;
+  width: 100%;
+}
 </style>
