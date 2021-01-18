@@ -34,7 +34,7 @@ import * as Icons from "@/static/icon.js";
 export default {
   props: {
     week: Number,
-    order: String,
+    orderIn: String,
   },
   data() {
     return {
@@ -67,7 +67,7 @@ export default {
         this.setWeekData(newWeek);
       },
     },
-    order: {
+    orderIn: {
       handler(newOrder) {
         // 当周数发生变动时，重设数据
         this.setWeekData(this.week);
@@ -80,6 +80,12 @@ export default {
         } else if (this.order == "cured") {
           this.orderName = "治愈情况";
         }
+      },
+    },
+    order: {
+      handler() {
+        // 当order发生变动时，重设数据
+        this.setWeekData(this.week);
       },
     },
   },
@@ -409,8 +415,8 @@ export default {
   height: 30px;
   /* text-align: center; */
   color: #e4e7ed;
-  margin-top: 72%;
-  margin-left: 68%;
+  margin-top: 68%;
+  margin-left: 72%;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
   position: absolute;
