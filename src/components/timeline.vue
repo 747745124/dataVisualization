@@ -45,9 +45,11 @@ export default {
           tooltip: {},
           controlStyle: {
             color: "#B4B4B4",
+            borderColor: "#B4B4B4",
           },
           lineStyle: {
           },
+          autoPlay: false,
           loop: true,
           left: "5%",
           right: "5%",

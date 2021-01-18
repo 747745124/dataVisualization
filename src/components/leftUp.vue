@@ -239,9 +239,10 @@ export default {
     margin-top: 20px;
   }
   .week-string {
-    color: #b4b4b4;
+    color: white;
     font-size: 24px;
     margin-top: 4px;
+    font-weight: bold;
   }
   .infected-num {
     cursor: pointer;
