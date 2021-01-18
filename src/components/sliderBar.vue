@@ -17,12 +17,6 @@
         </div>
       </div>
     </div>
-    <button class="button" v-on:click="changeOrder">
-      <span class="mr-2">
-        <icon name="sort"></icon>
-      </span>
-      <div class="order-name">{{ orderName }}</div>
-    </button>
   </div>
 </template>
 <script>
@@ -38,8 +32,6 @@ export default {
       slider: null, //滚动条DOM元素
       thunk: null, //拖拽DOM元素
       cur: this.value, //当前值
-      order: "infected",
-      orderName: "感染情况",
     };
   },
   //渲染到页面的时候
@@ -70,21 +62,6 @@ export default {
     };
   },
   methods: {
-    changeOrder: function () {
-      //改变order
-      if (this.order == "infected") {
-        this.order = "death";
-        this.orderName = "死亡情况";
-        
-      } else if (this.order == "death") {
-        this.order = "cured";
-        this.orderName = "治愈情况";
-      } else if (this.order == "cured") {
-        this.order = "infected";
-        this.orderName = "感染情况";
-      }
-      this.$emit("onChangeOrder", this.order);
-    },
   },
   computed: {
     // 设置一个百分比，提供计算slider进度宽度和trunk的left值
@@ -188,29 +165,5 @@ export default {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   opacity: 0.6;
-}
-.button {
-  cursor: pointer;
-  border: none;
-  background-color: #ffffff00;
-  border-radius: 15px;
-  width: 150px;
-  height: 30px;
-  text-align: center;
-  color: #e4e7ed;
-  margin-top: 20px;
-  margin-left: 395px;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-}
-.button:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  color: #ffffff;
-}
-.order-name {
-  position: absolute;
-  display: inline;
-  margin-top: -1px;
 }
 </style>
