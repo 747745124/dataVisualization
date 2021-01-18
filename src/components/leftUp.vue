@@ -6,7 +6,7 @@
     <div class="time-string d-flex jc-center">
       {{ beforeTimeString + "   ~   " + afterTimeString }}
     </div>
-    <div class="infected-num d-flex jc-center">
+    <div class="infected-num d-flex jc-center" v-on:click="changeOrder('infected')">
       感染数：{{ infectedNum }} ( 新增：{{ infectedNumWeek }}
       <div>
         <div v-if="infectedChange == 1">
@@ -28,7 +28,7 @@
       </div>
       )
     </div>
-    <div class="death-num d-flex jc-center">
+    <div class="death-num d-flex jc-center" v-on:click="changeOrder('death')">
       死亡数：{{ deathNum }} ( 新增：{{ deathNumWeek }}
       <div>
         <div v-if="deathChange == 1">
@@ -50,7 +50,7 @@
       </div>
       )
     </div>
-    <div class="cured-num d-flex jc-center">
+    <div class="cured-num d-flex jc-center" v-on:click="changeOrder('cured')">
       治愈数：{{ curedNum }} ( 新增：{{ curedNumWeek }}
       <div>
         <div v-if="curedChange == 1">
@@ -221,6 +221,11 @@ export default {
         }
       }
     },
+    //传递order
+    changeOrder: function (orderString) {
+
+      this.$emit("onChangeOrder", orderString);
+    },
   },
 };
 </script>
@@ -239,6 +244,7 @@ export default {
     margin-top: 4px;
   }
   .infected-num {
+    cursor: pointer;
     color: #920404;
     font-size: 14px;
     font-weight: bold;
@@ -246,8 +252,16 @@ export default {
     float: left;
     margin-left: 50px;
     width: 80%;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  .infected-num:hover {
+    color: #920404ee;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
   .death-num {
+    cursor: pointer;
     color: #956fd4;
     font-size: 14px;
     font-weight: bold;
@@ -255,8 +269,16 @@ export default {
     float: left;
     margin-left: 50px;
     width: 80%;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  .death-num:hover {
+    color: #956fd4ee;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
   .cured-num {
+    cursor: pointer;
     color: #3eace5;
     font-size: 14px;
     font-weight: bold;
@@ -264,6 +286,13 @@ export default {
     float: left;
     margin-left: 50px;
     width: 80%;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  .cured-num:hover {
+    color: #3eace5ee;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 </style>

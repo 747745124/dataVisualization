@@ -31,7 +31,7 @@
           <div class="left-box">
             <div class="mb-2">
               <dv-border-box-7 class="border-shadow">
-                <leftUp :week="curWeek"></leftUp>
+                <leftUp :week="curWeek" @onChangeOrder="updateOrder"></leftUp>
               </dv-border-box-7>
             </div>
             <div>
@@ -56,7 +56,6 @@
                   :max="21"
                   v-model="startWeek"
                   @onSlide="updateWeek"
-                  @onChangeOrder="updateOrder"
                 ></slider-bar>
               </dv-border-box-7>
             </div>

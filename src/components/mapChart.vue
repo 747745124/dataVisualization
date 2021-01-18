@@ -1,6 +1,6 @@
 <template>
   <div id="map">
-    <div style="position:absolute;" class="d-flex pt-2 pl-2">
+    <div style="position: absolute" class="d-flex pt-2 pl-2">
       <span style="color: rgba(0, 183, 255, 0.55)">
         <icon name="map"></icon>
       </span>
@@ -8,6 +8,12 @@
         <span class="fs-xl text mx-2">纽约市疫情</span>
       </div>
     </div>
+    <button class="button" v-on:click="changeOrder">
+      <span class="mr-2">
+        <icon name="sort"></icon>
+      </span>
+      <div class="order-name">{{ orderName }}</div>
+    </button>
     <div>
       <Echart
         :options="options"
@@ -47,6 +53,8 @@ export default {
       pointsData: [],
       minMoodIndex: Infinity,
       maxMoodIndex: -Infinity,
+      order: "infected",
+      orderName: "感染情况",
     };
   },
   mounted() {
@@ -60,9 +68,18 @@ export default {
       },
     },
     order: {
-      handler() {
+      handler(newOrder) {
         // 当周数发生变动时，重设数据
         this.setWeekData(this.week);
+        //改变order
+        this.order = newOrder;
+        if (this.order == "infected") {
+          this.orderName = "感染情况";
+        } else if (this.order == "death") {
+          this.orderName = "死亡情况";
+        } else if (this.order == "cured") {
+          this.orderName = "治愈情况";
+        }
       },
     },
   },
@@ -156,7 +173,6 @@ export default {
 
       this.setWeekData(1);
     },
-
     initPointsSet() {
       // 获取随机打乱的最大点集数组
       let shuffled = this.maxPointsData.sort(function () {
@@ -185,7 +201,6 @@ export default {
         this.pointsData.push(weekSet);
       }
     },
-
     // 检查指定点是否在多边形内部
     checkPointInPoly(point, poly) {
       for (var flag = false, i = -1, l = poly.length, j = l - 1; ++i < l; j = i)
@@ -198,7 +213,6 @@ export default {
           (flag = !flag);
       return flag;
     },
-
     // 生成随机点
     generateRandomPoint(boroughName, pointNum) {
       let polygonArr = Array(); //不规则区域数组
@@ -259,7 +273,6 @@ export default {
         }
       }
     },
-
     // 获取用于显示颜色的集合
     getVisualMap(order) {
       if (order == "infected") {
@@ -358,9 +371,49 @@ export default {
         };
       }
     },
+    //按钮
+    changeOrder: function () {
+      //改变order
+      if (this.order == "infected") {
+        this.order = "death";
+        this.orderName = "死亡情况";
+      } else if (this.order == "death") {
+        this.order = "cured";
+        this.orderName = "治愈情况";
+      } else if (this.order == "cured") {
+        this.order = "infected";
+        this.orderName = "感染情况";
+      }
+    },
   },
 };
 </script>
 
-
-
+<style>
+.button {
+  cursor: pointer;
+  border: none;
+  background-color: #ffffff00;
+  border-radius: 15px;
+  width: 150px;
+  height: 30px;
+  /* text-align: center; */
+  color: #e4e7ed;
+  margin-top: 72%;
+  margin-left: 68%;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  position: absolute;
+  z-index: 2;
+}
+.button:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #ffffff;
+}
+.order-name {
+  position: absolute;
+  display: inline;
+  margin-top: -1px;
+}
+</style>
