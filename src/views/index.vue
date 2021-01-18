@@ -87,14 +87,8 @@
 </template>
 
 <script>
-import sliderBar from "./sliderBar";
 import { formatTime } from "../utils/index.js";
-// import centerLeft1 from "./centerLeft1";
-// import centerRight1 from "./centerRight1";
-// import centerRight2 from "./centerRight2";
-// import center from "./center";
-// import bottomLeft from "./bottomLeft";
-// import bottomRight from "./bottomRight";
+import sliderBar from "@/components/sliderBar";
 import leftDown from "@/components/leftDown";
 import leftUp from "@/components/leftUp";
 import mapChart from "@/components/mapChart";

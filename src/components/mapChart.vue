@@ -1,6 +1,6 @@
 <template>
   <div id="map">
-    <div style="position:absolute;" class="d-flex pt-2 pl-2">
+    <div style="position: absolute" class="d-flex pt-2 pl-2">
       <span style="color: rgba(0, 183, 255, 0.55)">
         <icon name="map"></icon>
       </span>
@@ -79,9 +79,6 @@ export default {
         {
           name: "twitter",
           type: "scatter",
-          encode: {
-            tooltip: [0, 1],
-          },
           coordinateSystem: "geo",
           data: this.pointsData[weekIndex],
           symbolSize: 15,
@@ -97,7 +94,20 @@ export default {
       this.options = {
         visualMap: visualMapSet,
         roam: true,
-        tooltip: {},
+        tooltip: {
+          formatter: function (params) {
+            if (params.seriesType == "map") {
+              return (
+                params.seriesName +
+                "<br/>" +
+                params.data.name +
+                " : " +
+                params.data.value
+              );
+            }
+            else return "";
+          },
+        },
         geo: {
           map: "New York",
           zoom: 1.1, // 初始缩放大小
