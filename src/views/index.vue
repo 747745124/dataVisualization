@@ -51,12 +51,15 @@
             <div>
               <dv-border-box-7 class="border-shadow">
                 <!-- 时间滚动条 -->
+                <!--
                 <slider-bar
                   :min="1"
                   :max="21"
                   v-model="startWeek"
                   @onSlide="updateWeek"
                 ></slider-bar>
+                -->
+                <timeline :min="1" :max="21" @onSlide="updateWeek"></timeline>
               </dv-border-box-7>
             </div>
           </div>
@@ -87,13 +90,14 @@
 
 <script>
 import { formatTime } from "../utils/index.js";
-import sliderBar from "@/components/sliderBar";
+// import sliderBar from "@/components/sliderBar";
 import leftDown from "@/components/leftDown";
 import leftUp from "@/components/leftUp";
 import mapChart from "@/components/mapChart";
 import rightDown from "@/components/rightDown";
 import moodChart from "@/components/moodChart";
-import rightMiddle from "../components/rightMiddle.vue";
+import timeline from "@/components/timeline";
+import rightMiddle from "@/components/rightMiddle";
 export default {
   data() {
     return {
@@ -111,13 +115,8 @@ export default {
     };
   },
   components: {
-    sliderBar,
-    // centerLeft1,
-    // centerRight1,
-    // centerRight2,
-    // center,
-    // bottomLeft,
-    // bottomRight
+    // sliderBar,
+    timeline,
     rightMiddle,
     leftDown,
     leftUp,

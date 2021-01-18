@@ -416,7 +416,7 @@ export default {
   /* text-align: center; */
   color: #e4e7ed;
   margin-top: 68%;
-  margin-left: 72%;
+  margin-left: 68%;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
   position: absolute;
