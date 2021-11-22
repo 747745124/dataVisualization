@@ -5,12 +5,12 @@
         <icon name="laptop"></icon>
       </span>
       <div class="d-flex">
-        <span class="fs-xl text mx-2">本周最热门Twitter</span>
+        <span class="fs-xl text mx-2">Week Trending</span>
       </div>
     </div>
     <div class="up">
       <div class="item">
-        <p class="ml-3 colorBlue fw-b">本周Twitter</p>
+        <p class="ml-3 colorBlue fw-b">Tweet Num</p>
         <div>
           <dv-digital-flop
             :config="item1"
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="item">
-        <p class="ml-3 colorBlue fw-b">本周心情指数</p>
+        <p class="ml-3 colorBlue fw-b">Mood Index</p>
         <div>
           <dv-digital-flop
             :config="item2"

@@ -107,8 +107,8 @@ export default {
       dateWeek: null,
       weekday: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
       //字符串
-      title: "当疫情发生的时候我们在想什么",
-      groupMember: "李绍康 朱晴川 席昊",
+      title: "Mood And Virus",
+      groupMember: "A Group Project",
       startWeek: 1,
       curWeek: 1, // 当前周
       order: "infected", // 当前选择显示的部分

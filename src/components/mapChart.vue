@@ -5,7 +5,7 @@
         <icon name="map"></icon>
       </span>
       <div class="d-flex">
-        <span class="fs-xl text mx-2">纽约市疫情</span>
+        <span class="fs-xl text mx-2">New York City</span>
       </div>
     </div>
     <button class="button" v-on:click="changeOrder">
@@ -53,8 +53,8 @@ export default {
       pointsData: [],
       minMoodIndex: Infinity,
       maxMoodIndex: -Infinity,
-      order: "infected",
-      orderName: "感染情况",
+      order: "demise",
+      orderName: "demise",
     };
   },
   mounted() {
@@ -74,11 +74,11 @@ export default {
         //改变order
         this.order = newOrder;
         if (this.order == "infected") {
-          this.orderName = "感染情况";
-        } else if (this.order == "death") {
-          this.orderName = "死亡情况";
+          this.orderName = "infected";
+        } else if (this.order == "demise") {
+          this.orderName = "demise";
         } else if (this.order == "cured") {
-          this.orderName = "治愈情况";
+          this.orderName = "cured";
         }
       },
     },
@@ -127,8 +127,7 @@ export default {
                 " : " +
                 params.data.value
               );
-            }
-            else return "";
+            } else return "";
           },
         },
         geo: {
@@ -307,7 +306,7 @@ export default {
             color: "white",
           },
         };
-      } else if (order == "death") {
+      } else if (order == "demise") {
         return {
           min: 0,
           max: 6000,
@@ -352,12 +351,12 @@ export default {
           });
         }
         return {
-          name: "感染数",
+          name: "infected",
           type: "map",
           geoIndex: 0,
           data: set,
         };
-      } else if (order == "death") {
+      } else if (order == "demise") {
         let set = [];
         for (let i = 0; i < this.boroughsName.length; i++) {
           set.push({
@@ -366,7 +365,7 @@ export default {
           });
         }
         return {
-          name: "死亡数",
+          name: "demise",
           type: "map",
           geoIndex: 0,
           data: set,
@@ -380,7 +379,7 @@ export default {
           });
         }
         return {
-          name: "治愈数",
+          name: "cured",
           type: "map",
           geoIndex: 0,
           data: set,
@@ -391,14 +390,14 @@ export default {
     changeOrder: function () {
       //改变order
       if (this.order == "infected") {
-        this.order = "death";
-        this.orderName = "死亡情况";
-      } else if (this.order == "death") {
+        this.order = "demise";
+        this.orderName = "demise";
+      } else if (this.order == "demise") {
         this.order = "cured";
-        this.orderName = "治愈情况";
+        this.orderName = "cured";
       } else if (this.order == "cured") {
         this.order = "infected";
-        this.orderName = "感染情况";
+        this.orderName = "infected";
       }
     },
   },

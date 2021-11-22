@@ -6,7 +6,7 @@
           <icon name="chart-pie"></icon>
         </span>
         <div class="d-flex">
-          <span class="fs-xl text mx-2">心情指数</span>
+          <span class="fs-xl text mx-2">Mood Index</span>
         </div>
       </div>
       <Echart
@@ -61,13 +61,13 @@ export default {
         },
         series: [
           {
-            name: "推文态度",
+            name: "Tweet Mood",
             type: "pie",
             radius: "80%",
             center: ["50%", "50%"],
             data: [
-              { value: positive, name: "积极" },
-              { value: negative, name: "消极" },
+              { value: positive, name: "Positive" },
+              { value: negative, name: "Negative" },
             ],
             roseType: "radius",
             label: {
@@ -85,8 +85,8 @@ export default {
             },
             itemStyle: {
               color: function (param) {
-                if (param.name == "积极") return "#1DA1F2";
-                if (param.name == "消极") return "#EF1622";
+                if (param.name == "Positive") return "#1DA1F2";
+                if (param.name == "Negative") return "#EF1622";
               },
             },
             animationType: "scale",

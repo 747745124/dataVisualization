@@ -5,7 +5,7 @@
         <icon name="chart-line"></icon>
       </span>
       <div class="d-flex">
-        <span class="fs-xl text mx-2">疫情累计变化图</span>
+        <span class="fs-xl text mx-2">Accumulative View</span>
       </div>
     </div>
     <div>
@@ -65,7 +65,7 @@ export default {
             },
           },
           legend: {
-            data: ["感染数", "死亡数", "治愈数"],
+            data: ["Infected", "Demise", "Cured"],
             textStyle: {
               color: "#B4B4B4",
             },
@@ -114,7 +114,7 @@ export default {
           ],
           series: [
             {
-              name: "感染数",
+              name: "Infected",
               type: "line",
               smooth: true,
               showAllSymbol: true,
@@ -129,7 +129,7 @@ export default {
               data: newData.infected,
             },
             {
-              name: "死亡数",
+              name: "Demise",
               type: "line",
               smooth: true,
               showAllSymbol: true,
@@ -144,7 +144,7 @@ export default {
               data: newData.death,
             },
             {
-              name: "治愈数",
+              name: "Cured",
               type: "line",
               smooth: true,
               showAllSymbol: true,
@@ -189,7 +189,7 @@ export default {
       }
       for (let i = weekStart; i <= weekEnd; i++) {
         let weekData = Data.data[i - 1].virusdata[5];
-        newData.week.push("第" + i + "周");
+        newData.week.push("Week " + i);
         newData.infected.push(weekData.infected);
         newData.death.push(weekData.death);
         newData.cured.push(weekData.cured);

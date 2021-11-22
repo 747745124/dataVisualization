@@ -6,8 +6,11 @@
     <div class="time-string d-flex jc-center">
       {{ beforeTimeString + "   ~   " + afterTimeString }}
     </div>
-    <div class="infected-num d-flex jc-center" v-on:click="changeOrder('infected')">
-      感染数：{{ infectedNum }} ( 新增：{{ infectedNumWeek }}
+    <div
+      class="infected-num d-flex jc-center"
+      v-on:click="changeOrder('infected')"
+    >
+      Infected：{{ infectedNum }} ( Increase：{{ infectedNumWeek }}
       <div>
         <div v-if="infectedChange == 1">
           <!-- 根据新增感染数是否增加判断箭头方向 -->
@@ -29,7 +32,7 @@
       )
     </div>
     <div class="death-num d-flex jc-center" v-on:click="changeOrder('death')">
-      死亡数：{{ deathNum }} ( 新增：{{ deathNumWeek }}
+      Demise：{{ deathNum }} ( Increase：{{ deathNumWeek }}
       <div>
         <div v-if="deathChange == 1">
           <!-- 根据新增死亡数是否增加判断箭头方向 -->
@@ -51,7 +54,7 @@
       )
     </div>
     <div class="cured-num d-flex jc-center" v-on:click="changeOrder('cured')">
-      治愈数：{{ curedNum }} ( 新增：{{ curedNumWeek }}
+      Cured：{{ curedNum }} ( Increase：{{ curedNumWeek }}
       <div>
         <div v-if="curedChange == 1">
           <!-- 根据新增治愈数是否增加判断箭头方向 -->
@@ -143,15 +146,10 @@ export default {
       }
       //字符串
       this.beforeTimeString =
-        this.beforeYear +
-        "年" +
-        this.beforeMonth +
-        "月" +
-        this.beforeDay +
-        "日";
+        this.beforeYear + "." + this.beforeMonth + "." + this.beforeDay + ".";
       this.afterTimeString =
-        this.afterYear + "年" + this.afterMonth + "月" + this.afterDay + "日";
-      this.weekString = "第" + week + "周";
+        this.afterYear + "." + this.afterMonth + "." + this.afterDay + ".";
+      this.weekString = "Week " + week;
 
       //死亡数等
       this.infectedNum = Data.data[week - 1].virusdata[5].infected;
@@ -223,7 +221,6 @@ export default {
     },
     //传递order
     changeOrder: function (orderString) {
-
       this.$emit("onChangeOrder", orderString);
     },
   },

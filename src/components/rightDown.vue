@@ -5,7 +5,7 @@
         <icon name="sort-amount-down"></icon>
       </span>
       <div class="d-flex">
-        <span class="fs-xl text mx-2">话题热度排行榜</span>
+        <span class="fs-xl text mx-2">Top Topic</span>
       </div>
     </div>
     <div class="d-flex jc-center body-box">
@@ -42,7 +42,7 @@ export default {
     setWeek(week) {
       this.config = {
         // "讨论人数"
-        header: ["话题", "频次"],
+        header: ["Topic", "Trends"],
         topic1: "",
         topic2: "",
         topic3: "",
