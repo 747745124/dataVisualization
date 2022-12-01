@@ -1,28 +1,31 @@
-# update
+# Project on Data Visualization: What are we thinking when Covid outbreaks?
 
-## 需要引入echart
+This is a project on visualizing data between people's tweets and Covid case numbers. We implemented sentimental analysis to the tweets we collected using Twint and using Vue.js and several components for the data visualization.
+
+# Dependencies
+
+## Include echart
 ```
 npm install echart
 ```
 
-## 需要引入DataV
+## Include DataV
 ```
 npm install @jiaminghi/data-view
 ```
 
-## 需要引入awesome
+## Include awesome
 ```
 npm install vue-awesome
 ```
 
-## 需要引入 router
+## Include router
 ```
 npm install --save vue-router vuex
 ```
 
-# covid19_viz
 
-## Project setup
+# Project setup
 ```
 npm install
 ```
